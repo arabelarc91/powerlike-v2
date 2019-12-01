@@ -1,0 +1,503 @@
+.entel-form-popup {
+    width: 300px;
+    height: 466px;
+    z-index: 0;
+    border-radius: 30px;
+    background: transparent;
+
+    label[for="lead_phone"],
+    label[for="lead_dni"] {
+        width: 100%;
+    }
+
+    &.active {
+        top: -20px;
+        opacity: 1;
+        display: block; 
+        overflow:  hidden !important;
+        background-color: transparent !important;
+    }
+    
+    &.blue-close .entel-popup__close-element {
+        top: 14px;
+        width: 30px;
+        right: 21px;
+        height: 30px;
+        cursor: pointer;
+        position: absolute;
+        border-radius: 50%;
+        text-decoration: none;
+        color: var(--entel-aqua);
+        border: 2px solid #68D9D0;
+
+
+        &:hover {
+            transform: scale(.9);
+            -ms-transform: scale(.9);
+            -webkit-transform: scale(.9);
+            background-color: #68D9D0;
+        }
+
+        &::before {
+            top: 12px;
+            left: 58%;
+            width: 14px;
+            height: 4px;
+            border: none;
+            position: absolute;
+            background-color: #68D9D0;
+        }
+
+        &:hover::before {
+            background-color: white;
+        }
+
+        &::after {
+            top: 12px;
+            left: 58%;
+            width: 14px;
+            height: 4px;
+            border: none;
+            position: absolute;
+            background-color: #68D9D0;
+        }
+
+        &:hover::after {
+            background-color: white;
+        }
+
+
+    }
+
+    .entel-popup__content-form {
+        background-color: transparent !important;
+        background: linear-gradient(180deg, #0154A0 0%, #1991C4 100%);
+        border-radius: 30px;
+
+        @media screen and (min-width: 992px) {
+            width: 40%;
+            margin-left: 0px;
+        }
+
+        @media screen and (min-width: 1170px) {
+            background-position: center right;
+        }
+    }
+
+    .detail-plan-hogar {
+        width: 100%;
+        text-align: left;
+
+        @media (min-width: 992px) {
+            width: 51%;
+            display: inline-block;
+        }
+
+        @media (min-width: 1170px) {
+            width: 45%;
+        }
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .entel-button-prov {
+        margin: 21px auto 0;
+        display: block;
+        width: 240px;
+    }
+
+    .text-link-tc {text-align: left}
+
+    #contact-form {
+        width: 100%;
+
+        div {
+
+            img {
+                width: 20%;
+            }
+
+            h6 {
+                color: white;
+                font-size: 30px;
+                line-height: 20px;
+                padding-left: 8px;
+                padding-top: 30px;
+
+
+                @media screen and (min-width: 768px) {
+                    font-size: 35px;
+                    line-height: 0;
+                    padding-left: 8px;
+                    padding-top: 0;
+                }
+            }
+
+            img, h6 {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        @media (min-width: 992px) {
+            // width: 63%;
+            margin-left: 0px;
+        }
+
+        @media (min-width: 1170px) {
+            // width: 50%;
+            margin-left: 0px;
+        }
+        
+        .text-title {
+            color: white;
+            font-size: 24px;
+            margin-top: -7px;
+            line-height: 30px;
+            padding-top: 14px;
+            margin-bottom: 14px;
+
+            span {
+                color: white;
+                font-size: 15px;
+                display: block;
+
+            }
+
+            strong {
+                a {
+                    color: #ff6702;
+                    font-size: 30px;
+                    font-weight: 900;
+                    font-family: DINNextLTPro Bold,sans-serif;
+                }
+
+                small {
+                    color: white;
+                    font-size: 13px;
+                    display: block;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        .entel-input {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+
+            input {
+
+                width: 100%;
+                height: 50px;
+                color: #0154a0;
+                font-size: 16px;
+                margin-bottom: 10px;
+                border-radius: 50px;
+                padding: 13px 21px 8px;
+                background-color: white;
+                
+
+                &.error {
+                    color: red;
+                    border-color: white;
+
+                    &~span {
+                        color: red;
+                    }
+                }
+            }
+
+            span {
+                top: 16px;
+                left: 21px;
+                color: #0154a0;
+                font-size: 16px;
+
+                &.focus {
+                    font-size: 12px;
+                    right: 21px;
+                    text-align: right;
+                    color: #8ABFF1;
+                }
+            }
+        }
+
+        .subtitle-plan-hogar {
+            font-size: 16px;
+            font-family: 'DINNextLTPro Bold', sans-serif;
+            text-align: left;
+            margin-top: 0px;
+
+            @media screen and (max-width: 992px) {
+                font-size: 13px;
+                line-height: 15px;
+                margin-bottom: 27px;
+            }
+
+
+        }
+
+        & > div {
+            @media (max-width: 992px) {
+                padding: 0px 19px 0 19px !important;
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: -21px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin: 0 auto;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: 240px !important;
+    
+            &:focus {
+                border: none;
+            }
+
+            &.entel-button-disabled {
+                background-color: #e1e4ea !important;
+            }
+        }
+
+        .entel-checkbox,
+        button {
+            display: block;
+            width: 100%;
+
+            @media (min-width: 992px) {
+                width: auto;
+            }
+        }
+        .entel-checkbox {
+            width: 240px;
+            color: #fff;
+            margin: 0 auto;
+            padding: 10px 15px;
+            font-size: 13px;
+            text-align: right;
+            line-height: 15px;
+            margin-bottom: 0px;
+        
+
+            input[type=checkbox][type=checkbox]:checked+label+i {
+                background-color: transparent;
+            }
+
+            i {
+                top: 7px;
+                left: auto;
+                border: 1px solid white;
+            }
+
+            @media (max-width: 992px) {
+                width: 240px;
+                padding-bottom: 20px;
+            }
+
+            a {
+                font-size: 13px;
+                line-height: 15px;
+                display: inline;
+                color: white;
+            }
+        }
+    }
+
+    @media screen and (min-width: 325px) {
+        width: 320px;
+        height: 480px;
+
+        #contact-form {
+            div img {
+                width: 30%;
+            }
+
+            .text-title {
+                margin-top: 14px;
+            }
+
+            .entel-input {
+                width: 220px;
+
+                span {
+                    top: 16px;
+                }
+
+                input {
+                    margin-bottom: 15px;
+                }
+            }
+
+            & > div {
+                padding: 0px 15px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 400px !important;
+        height: 520px !important;
+        background-color: transparent !important;
+
+        // &.blue-close .entel-popup__close-element {
+        //     top: 40px;
+        // }
+
+        #contact-form {
+
+            div img {
+                width: auto;
+            }
+
+            & > div {
+                padding: 0px 15px;
+            }
+
+            .text-title  {
+                font-size: 26px;
+                margin: 17px auto;
+                line-height:  30px;
+
+                span {
+                    font-size: 20px;
+                }
+
+                strong {
+                    a {
+                        color: #ff6702;
+                        font-size: 30px;
+                        font-weight: 900;
+                        font-family: DINNextLTPro Bold,sans-serif;
+                    }
+
+                    small {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+
+            .entel-input {
+                width: 260px;
+
+                span {
+                    top: 16px;
+                }
+
+                input {
+                    margin-bottom: 15px;
+                }
+            }
+        }            
+    }
+
+    //
+    .entel-popup__content {
+        top: 0px;
+        left: 0px;
+        width:100%;
+        opacity: 0;
+        display: none;
+        height: 395px;
+        padding-top: 20px !important;
+        position: absolute;
+        transition: opacity,filter ease-in .3s;
+        -webkit-transition: opacity,filter ease-in .3s;
+        -ms-transform-origin: opacity,filter ease-in .3s;
+        background-color: white;
+        // padding: 56px 40px 40px 120px;
+
+
+        &-thanks {
+            padding-left: 40px;
+            border-radius: 30px;
+            background: linear-gradient(180deg, #0154A0 0%, #1991C4 100%);
+
+            h6{
+                font-size: 30px;
+                line-height: 32px;
+                color: white !important;
+                // margin-top: 90px;
+
+                @media (min-width: 992px) {
+                    margin-bottom: 0px;
+                }
+            }
+
+            p{
+                font-size: 18px;
+                color: white !important;
+            }
+
+            img{
+                margin: 30px auto 40px !important;
+                width: 130px;
+
+                @media (min-width: 992px) {
+                    margin: 80px auto 40px !important;
+                }
+            }
+        }
+
+        &-error {
+            padding-left: 40px;
+
+            h6{
+                font-size: 30px;
+                line-height: 32px;
+                margin-top: 40px;
+                margin-bottom: 20px;
+
+                @media (min-width: 992px) {
+                    margin-bottom: 40px;
+                }
+            }
+
+            p{
+                margin: 0px 10%;
+                padding: 20px;
+                border-top: 1px solid #0154a0;
+
+                @media (min-width: 992px) {
+                    padding: 40px 20px;
+                }
+
+                span {
+                    display: inline-block;
+                }
+            }
+
+            img{
+                margin-top: 70px;
+            }
+        }
+
+        @media screen and (min-width: 325px) {
+            padding-top: 35px;
+            height: 440px;
+        }
+
+        @media screen and (min-width: 425px) {
+            width: 100%;
+            height: 445px;
+            padding-top: 35px;
+
+        }
+
+        @media screen and (min-width: 768px) {
+            width: 400px;
+            height: 450px;
+            padding-top: 68px;
+            padding: 68px 23px;
+        }
+
+    }
+}
+

@@ -1,0 +1,263 @@
+.buySection{
+	@extend .bg.grey;
+	@extend .textCenter;
+	padding: 1rem;
+	box-sizing: border-box;
+	.TextoAdicional{
+		p{
+			@extend .blueText;
+			@extend .DINNextLTProLight;
+			margin: 1rem;
+			font-size: ( 16 / $base-font ) + rem;
+			strong{
+				@extend .DINNextLTProBold;
+				@extend .upperCase;
+			}
+			span{
+				@extend .orageText;
+				@extend .DINNextLTProBold;
+			}
+			a{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.pricesSubSection{
+		border: 1px solid $e-text-disabled;
+		padding: 0rem;
+		position: relative;
+		&.equipoLibre{
+			.tleft{
+				@extend .textLeft;
+			}
+			.tRight{
+				@extend .textRight;
+			}
+		}
+
+		&.disabled{
+			@extend .disabledText;
+			.onlyWeb{
+				@extend .disabledText;
+				border: 1px solid $e-text-disabled;
+			}
+			.prices{
+				@extend .disabledText;
+			}
+		}
+
+		.onlyWeb{
+			@extend .linkText;
+			@extend .bg.grey;
+			@extend .DINNextLTProMedium;
+			position: absolute;
+			border: 1px solid $e-links;
+			top: -0.6rem;
+			left: 33%;
+			right: 33%;
+			font-size: ( 12 / $base-font ) + rem;
+		}
+
+		.detailPrice{
+			&.noStock{
+				@extend .blueText;
+				padding: 1rem;
+			}
+		}
+
+		.prices{
+			@extend .blueText;
+			padding: 0rem;
+			display: inline-block;
+			vertical-align: text-top;
+			margin-top: 1rem;
+			h4{
+				@extend .DINNextLTProBold;
+				margin: 0rem;
+				font-size: ( 24 / $base-font ) + rem;
+				font-weight: 900;
+			}
+			p{
+				font-size: ( 12 / $base-font ) + rem;
+			}
+			&.textAdd{
+				p{
+					@extend .textRight;
+					font-size: ( 14 / $base-font ) + rem;
+				}
+			}
+			&.priceBefore{
+				@extend .textCenter;
+				p{
+					@extend .blueLightText;
+					text-decoration:line-through;
+					margin: 0;
+				}
+				h4{
+					font-size: ( 28 / $base-font ) + rem;
+				}
+			}
+		}
+
+		.mas{
+			@extend .orageText;
+			margin-top: 1.5rem;
+			font-weight: 900;
+			font-size: 1.5rem;
+			vertical-align: middle;
+		}
+	}
+
+	.buttonBuySubSection{
+		input{
+			@extend .bg.white;
+			padding: 0.48rem;
+			color: #c6c6c6;
+			display: inline-block;
+			border: 1px solid $e-text-disabled;
+			line-height: 1.2rem;
+			vertical-align: middle;
+		}
+
+		.buttonBuy,
+		.buttonBuyTwo{
+			@extend .DINNextLTProBold;
+			@extend .whiteText;
+			@extend .bg.orange;
+			@extend .textCenter;
+			@extend .upperCase;
+			margin: 1rem 0rem;
+			border: none;
+			font-size: 1rem;
+			font-weight: 900;
+			width: 100%;
+			padding: 0.5rem 35%;
+			text-decoration: none;
+			display: block;
+			cursor: pointer;
+			&:hover{
+				@extend .whiteText;
+				@extend .bg.orange;
+			}
+			&.noStockButton{
+				display: inline-block;
+				vertical-align: top;
+				line-height: 1.2rem;
+				width: 20%;
+				padding: 0.54rem;
+				margin: 0 0 0 -0.3rem;
+			}
+		}
+	}
+	
+	.noStockButtonSubSection{
+		.withoutstockContainer{
+			margin: 1rem 0rem;
+			p{
+				@extend .hide;
+			}
+
+			input{
+				&.notifyme-client-name{
+					@extend .hide;
+				}
+				&[type="text"]{
+					@extend .bg.white;
+					@extend .blueText;
+					padding: 0.48rem;
+					display: inline-block;
+					border: 1px solid $e-text-disabled;
+					line-height: 1.2rem;
+					vertical-align: middle;
+					width: 70%;
+				}
+				&[type="button"]{
+					@extend .DINNextLTProBold;
+					@extend .whiteText;
+					@extend .bg.orange;
+					@extend .textCenter;
+					@extend .upperCase;
+					border: none;
+					font-size: 1rem;
+					font-weight: 900;
+					text-decoration: none;
+					cursor: pointer;
+					display: inline-block;
+					vertical-align: top;
+					line-height: 1.2rem;
+					width: 20%;
+					padding: 0.54rem;
+					margin: 0 0 0 -0.3rem;
+					&:hover{
+						@extend .whiteText;
+						@extend .bg.orange;
+					}
+				}
+			}
+			
+			fieldset{
+				@extend .blueText;
+				font-weight: bolder;
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.buySection{
+		.pricesSubSection{
+			.prices {
+				&.textAdd{
+				      p{
+		    		   	font-size: .75rem;
+				   }
+				}
+				p {
+					font-size: 0.59rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.buySection{
+		.pricesSubSection{
+			.prices{
+			   &.textAdd{
+			      p{
+	    		   font-size: .6rem;
+				    }
+				}
+			  }
+		}
+		.buttonBuySubSection{
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 90%;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.buySection {
+		.pricesSubSection{
+			.onlyWeb {
+				position: absolute;
+				border: 1px solid $e-links;
+				top: -0.6rem;
+				left: 40%;
+				right: 40%;
+				font-size: 0.75rem;
+			}
+		}
+
+		.buttonBuySubSection{
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 90%;
+		}
+	}
+}

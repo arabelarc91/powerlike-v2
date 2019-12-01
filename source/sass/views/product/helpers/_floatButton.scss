@@ -1,0 +1,69 @@
+.sectionFloat{
+    position: fixed;
+    bottom: 5rem;
+    width: 100%;
+    z-index: 999;
+    height: auto;
+    .btnFlotante{
+    cursor: pointer;
+        @extend .bg.blue;
+        width: 50%;
+        border-radius: 5px 0 0 5px;
+        padding:0rem .5rem;
+        right: 0;
+        bottom: 1vh;
+        position: absolute;
+        display: flex;
+        .iconSuscrip{
+            @extend .whiteText;
+            padding: 0.5rem;
+        }
+        .textSuscrip{
+            padding: 0.5rem;
+            h3{
+                @extend .DINNextLTProLight;
+                @extend .whiteText;
+                font-size: 1rem;
+                margin-top: 0.7rem;
+                text-align: center;
+            }
+        }
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+
+        .sectionFloat{
+            .btnFlotante{
+                width: 24%;
+                right: 0rem !important;
+            }
+        }
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+    .sectionFloat{
+        .btnFlotante{
+            width: 20% !important;
+            right: 0rem !important;
+            }
+      }
+}
+
+
+
+@media (min-width: 1025px){
+    .sectionFloat{
+        .btnFlotante{
+            width: 15% !important;
+            right: -9rem !important;
+            transition: all 0.4s ease;
+        &:hover{
+            right: 0 !important;
+            transition: all 0.3s ease;
+        }
+        }
+
+    }
+}

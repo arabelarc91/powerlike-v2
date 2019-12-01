@@ -1,0 +1,61 @@
+@import  "_variables";
+
+.textCenter{
+	text-align: center;
+}
+
+.textLeft{
+	text-align: left;
+}
+
+.textRight{
+	text-align: right;
+}
+
+.upperCase{
+	text-transform: uppercase;
+}
+
+.lowerCase{
+	text-transform: lowercase;
+}
+
+.capitalize{
+	text-transform: capitalize;
+}
+
+.blueText{
+	color: $e-blue;
+}
+
+.orageText{
+	color: $e-orange;
+}
+
+.whiteText{
+	color: $e-white;
+}
+
+.blackText{
+	color: $e-black;
+}
+
+.disabledText{
+	color: $e-text-disabled;
+}
+
+.linkText{
+	color: $e-links;
+}
+
+.redText{
+	color: $e-red;
+}
+
+.yellowText{
+	color: $e-yellow;
+}
+
+.blueLightText{
+	color: $e-blue-light;
+}

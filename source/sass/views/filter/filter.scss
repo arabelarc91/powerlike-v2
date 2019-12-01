@@ -1,0 +1,24 @@
+
+// Vars
+@import '../../base/index';
+
+// Components
+ 
+
+// Theme reset
+@import '../../theme/index';
+
+// Preselector
+@import '../preselector/preselector';
+
+// sections
+@import 'header';
+@import 'hero';
+@import 'countdown';
+//@import 'hero_terminos';
+@import 'ctaentel_bar';
+@import 'principal-filters';
+@import 'modalities-filter';
+@import 'filter-nav';
+@import 'products';
+@import 'footer';

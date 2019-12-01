@@ -1,0 +1,46 @@
+.masEquiposSubSection{
+	.itemProduct{
+		li{
+			width: (252 / $base-font) + rem;
+			.brand, .productName, .tag{
+				@extend .textCenter;
+				width: 100%;
+				display: block;
+			}
+			.detail{
+				.detalle{
+					.acuerdo{
+						.product-field{
+							ul{
+								li{
+									line-height: (15 / $base-font) + rem;
+									font-size: (11 / $base-font) + rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.masEquiposSubSection{
+		.itemProduct{
+			li{
+				width: (256 / $base-font) + rem;
+			}
+		}
+	}
+  }
+
+@media (min-width: 992px) {
+	.masEquiposSubSection{
+		.itemProduct{
+			li{
+				width: (262 / $base-font) + rem;
+			}
+		}
+	}
+}

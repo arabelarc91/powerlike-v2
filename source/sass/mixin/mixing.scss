@@ -1,0 +1,35 @@
+@mixin transition($property) {
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -o-transition: $property;
+    transition: $property;
+}
+
+@mixin nodraggable() {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+@mixin rotate($property) {
+    -ms-transform: rotate($property); /* IE 9 */
+    -webkit-transform: rotate($property); /* Safari 3-8 */
+    transform: rotate($property);
+}
+
+@mixin placeholder_color($property) {
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $property;
+        opacity: 1; /* Firefox */
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $property;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $property;
+    }
+}
+

@@ -1,0 +1,314 @@
+
+.entel-thumbnail-phone-card {
+    width: 280px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    overflow: hidden;
+    line-height: 20px;
+    min-height: 434px;
+    transition: 0.25s;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+    display: inline-block;
+    border: 1px solid $gray-line;
+    color: $brand-primary;
+    text-decoration: none;
+    transition: transform 0.2s linear;
+
+    @media (min-width: $tablet-s) {
+        margin: 0 5px 10px;
+    }
+
+    @media (min-width: $tablet-m) {
+        width: 241px;
+    }
+
+    @media (min-width: $laptop-m) {
+        width: 280px;
+        padding: 20px;
+        margin: 0 7px 15px;
+
+        &__phone-image {
+            height: 120px;
+
+            &__img {
+                height: 120px;
+                width: 125px;
+            }
+        }
+
+        &__detail {
+            &__phone-plussign {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+    &:hover {
+        transform: translate(0, -1px);
+    }
+
+    &:visited {
+        border: 1px solid #b2cbe2 !important; 
+    }
+
+    > span {
+        display: block;
+        text-transform: uppercase;
+    }
+
+    strong {
+        font-weight: 700;
+    }
+
+    &__tag {
+        height: 20px;
+        position: relative;
+        width: calc(100%/2);
+        margin-right: calc(100%/2);
+        display: inline-block;
+        vertical-align: middle;
+
+        &--orange {
+            height: 22px;
+            color: $white;
+            font-size: 11px;
+            padding: 7px 0;
+            line-height: 11px;
+            border-radius: 2px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: $orange;
+        }
+    }
+
+    &__marca {        
+        text-transform: uppercase;
+        font-size: 14px;
+        display: block;
+        font-weight: 700;
+    }
+
+    h2 {
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 1px;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 300;
+    }
+
+    &__featured {
+        display: block;
+        margin-top: 5px;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            width: auto;
+            color: $blue-light;
+            text-transform: uppercase;
+            border-right: 1px solid $entel_celeste;
+            padding: 0 10px;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    &__description {
+        margin-top: 18px;
+        position: relative;
+
+        > div {
+            width: auto;
+            display: block;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    &__phone-image {
+        height: 120px;
+        max-height: 151px;
+        text-align: center;
+        position: relative;
+
+        &__img {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 120px;
+            width: 125px;
+            margin-left: auto;
+            margin-right: auto;
+            position: absolute;
+
+            img {
+                display: inline-block;
+                height: 100%;
+            }
+        }
+
+        &__tag {
+            left: 28%;
+            width: 36px;
+            z-index: 10;
+            height: 20px;
+            color: $white;
+            margin: 10px 0;
+            text-align: center;
+            position: relative;
+            border-radius: 3px;
+            background-color: $orange;
+
+            span {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            &::after {
+                content: '';
+                bottom: 0;
+                border-right: 0;
+                border-bottom: 0;
+                position: absolute;
+                border: 10px solid transparent;
+                border-bottom: 0;
+                border-right: 0;
+                margin-left: -10px;
+                margin-bottom: -7px;
+                border-top-color: $orange;
+            }
+        }
+
+        &__tag--blue {
+            background-color: $blue-oscuro-2;
+
+            &::after {
+                border-top-color: $blue-oscuro-2;
+            }
+        }
+
+        &__tag--skyblue {
+            background-color: $blue-2;
+
+            &::after {
+                border-top-color: $blue-2;
+            }
+        }
+
+        &__tag--orange {
+            background-color: $orange;
+
+            &::after {
+                border-top-color: $orange;
+            }
+        }
+    }
+
+    &__detail {
+        width: auto;
+        margin-top: 20px;
+
+        &__name {
+            font-size: 14px;
+            line-height: 20px;
+            text-transform: uppercase;
+
+            span {
+                color: $entel_celeste;
+            }
+        }
+
+        &__phone-plussign {
+            padding: 0 5px;
+            display: inline-block;
+            vertical-align: middle;
+
+            span {
+                font-size: 25px;
+                color: $orange;
+            }
+        }
+
+        &__phone-initialfee,
+        &__phone-price {
+            margin: 0;
+            color: $entel_celeste;
+            display: inline-block;
+            vertical-align: middle;
+
+            span {
+                display: block;
+                font-size: 22px;
+                line-height: 20px;
+                color: $entel_azul;
+
+                em {
+                    font-style: normal;
+                    font-size: inherit;
+                }
+
+                small {
+                    font-size: 11px;
+                    padding-top: 6px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        &__phone-price  {
+            font-weight: bold;
+        }
+
+        &__phone-initialfee {
+
+            &--small {
+                small.orange {
+                    color: $orange;
+                }
+            }
+        }
+
+        &__plan-price {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        &__plan-price__postpago {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        &__agreement {
+            font-size: 10px;
+            line-height: 10px;
+            margin-top: 12px;
+            color: $blue-light;
+            display: block;
+        }
+    }
+
+    .entel-button {
+        margin-top: 23px;
+        display: block;
+        min-width: initial;
+        max-width: 100%;
+    }
+}

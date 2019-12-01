@@ -1,0 +1,302 @@
+
+header {
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    position: absolute;
+    padding: 0 20px;
+    text-align: left;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background-color: $gray-header;;
+
+    @media screen and (min-width: $sm-viewport) {
+        height: 80px;
+        line-height: 70px;
+        padding: 0 42px;
+    }
+
+    @media screen and (min-width: $md-viewport) {
+        width: 100%;
+        height: 80px;
+        padding: 0 42px;
+        line-height: 60px;
+    }
+
+    .entel-logo {
+        display: inline-block;
+        vertical-align: middle;
+
+        span {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 11px;
+        }
+
+        img {
+            width: auto;
+            max-width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }                        
+    }
+
+    .entel-televenta {
+        top: 0;
+        padding: 0;
+        right: 20px;
+        float: right;
+        height: 100%;
+        width: auto;
+        line-height: 1;
+        position: absolute;
+        text-align: center;
+        display: block !important;
+
+        p {
+            color: $blue;
+        }
+
+        p:first-child  {
+            margin: 0;
+            opacity: 1;
+            display: block;
+            font-size: 12px;
+
+            strong {
+                opacity: 0;
+                display: none;
+            }
+
+            span {
+                em {
+                    display: inline;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
+
+            @media screen and (min-width: $sm-viewport) {
+                opacity: 1;
+                display: block;                                                    
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 8px;
+
+                strong {
+                    opacity: 1;
+                    color: $blue;
+                    display: inline-block;
+                    font-weight: 900;
+                }
+            }
+
+            @media screen and (min-width: $tablet-m) {
+                span {
+                    em {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        p:last-child {      
+            display: inline-block;
+
+            strong {
+                display: none;
+            }
+
+            @media screen and (min-width: $sm-viewport) {
+                font-size: 18px;  
+                line-height: 16px;
+                
+                strong {
+                    top: 4px;
+                    display: inline-block;                    
+                    margin-right: 3px;
+                    position: relative;
+                    
+                    a {
+                        padding: 0;
+                        color: $blue;
+                        font-weight: 900;
+                        text-decoration: none;
+                        background: transparent;
+                    }
+                }
+            }
+
+            a.btn-open-modal {
+                display: inline-block;
+                opacity: 1;
+                height: auto;
+                color: #FF560A;
+                font-weight: bold;
+                padding: 4px 15px;
+                border-radius: 50px;
+                text-decoration: none;
+                border: 1px solid #FF560A;
+                background: transparent;
+                
+                em {
+                    display: block;
+                    font-size: 11px;
+                    line-height: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    position: relative;
+                }
+            }
+        } 
+
+        @media screen and (min-width: $tablet-m) {
+            right: 0;
+            width: 300px;
+            padding: 14px 0;
+            line-height: normal;
+            position: relative;
+        }
+    }
+
+    @keyframes bounce_entel {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes bounce_entelIn {
+        0%{
+        opacity: 0;
+        transform: scale(0.3) translate3d(0,0,0);
+        }
+        50%{
+        opacity: 0.9;
+        transform: scale(1.1);
+        }
+        80%{
+        opacity: 1;
+        transform: scale(0.89);
+        }
+        100%{
+        opacity: 1;
+        transform: scale(1) translate3d(0,0,0);
+        }
+    }
+
+    @keyframes rotate_entelOut {
+        from {
+            transform-origin: center;
+            opacity: 1;
+        }
+        
+        to {
+            transform-origin: center;
+            transform: rotate_entel3d(0, 0, 1, 200deg);
+            opacity: 0;
+        }
+    }
+
+    @keyframes rotate_entelIn {
+        from {
+        transform-origin: center;
+        transform: rotate_entel3d(0, 0, 1, -200deg);
+        opacity: 0;
+        }
+    
+        to {
+        transform-origin: center;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+        }
+    }
+}
+
+.float-button {
+    margin: 0;
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    bottom: 70px;
+    right: 10px;
+    z-index: 999;
+    display: block;
+    position: fixed;
+    line-height: 1;
+    text-align: center;
+    border-radius: 50%;
+    pointer-events: none;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px #D4F0FF;
+    background: linear-gradient(89.93deg,#004fb9 1.66%,#0360de 99.93%);
+
+    @media (min-width: $tablet-s) {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    @media (min-width: $laptop-m) {
+        width: 90px;
+        height: 90px;
+        bottom: 24px;
+        right: 30px;
+    }
+
+    &.init {
+        opacity: 1;
+        pointer-events: initial;
+    }
+
+    &.load {
+        animation-duration: .3s;
+        animation-fill-mode: both;
+        animation-name: bounceIn;
+        animation-delay: .3s;
+    }
+
+    &.ocult {
+        animation-duration: .1s;
+        animation-fill-mode: both;
+        animation-name: rotateOut;
+        animation-delay: .1s;
+    }
+
+    &.no-ocult {
+        animation-duration: .1s;
+        animation-fill-mode: both;
+        animation-name: rotateIn;
+        animation-delay: .1s;
+        pointer-events: initial;
+    }
+
+    &.do-bounce {
+        animation-duration: .3s;
+        animation-fill-mode: both;
+        animation-name: bounce;
+        animation-delay: .2s;
+        animation-iteration-count: 2;
+    }
+
+    span {
+        display: block;
+        margin: 13px 0 6px 0;
+        font-size: 12px;
+        color: $white;
+
+        @media (min-width: $laptop-m) {
+            font-size: 14px;
+            margin: 18px 0 10px 0;
+        }
+    }
+
+
+    img {
+        width: 35px;
+    }
+}

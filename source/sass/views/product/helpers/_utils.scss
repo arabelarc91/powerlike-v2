@@ -1,0 +1,151 @@
+@import  "_variables";
+
+body .ml-main .module.terminos {
+    margin-right: 0px !important;
+    margin-left: 0px !important;	
+}
+
+.noPad{
+	padding: 0rem !important;
+}
+
+.noPadTop{
+	padding-top: 0rem !important;
+}
+
+.noPadRight{
+	padding-right: 0rem !important;
+}
+
+.noPadBottom{
+	padding-bottom: 0rem !important;
+}
+
+.noPadLeft{
+	padding-left: 0rem !important;
+}
+
+.noMar{
+	margin: 0rem !important;
+}
+
+.noMarTop{
+	margin-top: 0rem !important;
+}
+
+.noMarRight{
+	margin-right: 0rem !important;
+}
+
+.noMarBottom{
+	margin-bottom: 0rem !important;
+}
+
+.noMarLeft{
+	margin-left: 0rem !important;
+}
+
+.hide{
+	display: none !important;
+}
+
+.show{
+	display: block !important;
+}
+
+.showInline{
+	display: inline-block !important;
+}
+
+.bg{
+	&.blue{
+		background-color: $e-blue;
+	}
+	&.orange{
+		background-color: $e-orange;
+	}
+	&.disabled{
+		background-color: $e-disabled;
+	}
+	&.links{
+		background-color: $e-links;
+	}
+	&.blueDisabled{
+		background-color: $e-text-disabled;
+	}
+	&.white{
+		background-color: $e-white;
+	}
+	&.black{
+		background-color: $e-black;
+	}
+	&.orangeCircle{
+		background-color: $e-orange-circle;
+	}
+	&.blueCircle{
+		background-color: $e-blue-circle;
+	}
+	&.red{
+		background-color: $e-red;
+	}
+	&.yellow{
+		background-color: $e-yellow;
+	}
+	&.transparent{
+		background-color: transparent;
+	}
+	&.grey{
+		background-color: $e-grey;
+	}
+	&.spaceGray{
+		background-color: $e-space-gray;
+	}
+	&.anotherGray{
+		background-color: $e-another-gray;
+	}
+	&.anotherBlue{
+		background-color: $e-another-blue;
+	}
+	&.gold{
+		background-color: $e-gold;
+	}
+	&.metalic{
+		background-color: $e-metalic;
+	}
+	&.titan{
+		background-color: $e-titan;
+	}
+	&.blackBlue{
+		background-color: $e-another-blue;
+	}
+	&.anotherRed{
+		background-color: $e-another-red;
+	}
+	&.flashGrey{
+		background-color: $e-flash-gray;
+	}
+	&.deepIndigo{
+		background-color: $e-deep-indigo;
+	}
+	&.pink{
+		background-color: $e-pink;
+	}
+	&.silver{
+		background-color: $e-silver;
+	}
+	&.brown{
+		background-color: $e-brown;
+	}
+	&.lilac{
+		background-color: $e-lilac;
+	}
+	&.blueSilver{
+		background-color: $e-blue-silver;
+	}
+	&.lavender{
+		background-color: $e-lavender;
+	}
+	&.midnightBlack{
+		background-color: $e-midnight-black;
+	}
+}

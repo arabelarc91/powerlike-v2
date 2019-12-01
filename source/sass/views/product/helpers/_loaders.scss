@@ -1,0 +1,17 @@
+@import "_variables";
+@import "_mixins";
+
+.isLoading:after {
+    position: absolute;
+	bottom: 0.3rem;
+    right: 1.2rem;
+    content: " ";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid $e-white;
+    border-color:$e-white transparent $e-white transparent;
+    @include animation(loader 550ms infinite linear);
+}

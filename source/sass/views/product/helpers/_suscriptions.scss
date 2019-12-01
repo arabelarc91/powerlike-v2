@@ -1,0 +1,296 @@
+.modalRecibirPromos{
+	.modal-body{
+		margin-top: 2.27em;
+	}
+
+	.modal-footer{
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.modal-header {
+		@extend .textRight;
+		display: block;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 1rem;
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.closeS{
+		@extend .bg.white;
+		@extend .orageText;
+		font-weight: 900;
+		border: 2px solid $e-orange !important;
+		border-radius: 40px;
+		padding: 0.1rem 0.55rem !important;
+	}
+
+	.soliExitosa{
+		width: 100%;
+		padding: 0;
+		.titulo{
+			@extend .DINNextLTProLight;
+			@extend .blueText;
+			font-size: 1.2em;
+			line-height: 1.1em;
+		}
+		.tituloGenial{
+			@extend .DINNextLTProBold;
+			@extend .blueText;
+			font-size: 1.4em;
+			line-height: 1em;
+		}
+		.textGenialSuscrito{
+			@extend .blueText;
+			@extend .DINNextLTProLight;
+			line-height: 1em;
+			margin-bottom: 4em;
+		}
+	}
+
+	.center{
+		@extend .textCenter;
+		padding: 0em 1em;
+	}
+
+	input{
+		@extend .DINNextLTProLight;
+		width: 100%;
+		padding: 1.5rem .5rem 0rem 0rem;
+		border: none;
+		border-bottom: 1px solid #0154a0;
+		outline: 0;
+		padding-right: 26px;
+		padding-left: 0;
+		color: #0154a0;
+		&::placeholder{
+			@extend .blueText;
+			color: rgba(1, 84, 160, 0.8196078431372549);
+		}
+	}
+
+	.textoVerPoliticasPriv{
+		@extend .blueText;
+		@extend .DINNextLTProLight;
+		@extend .textCenter;
+		padding: 1.7em 0em 2.87em 0em;
+		cursor: pointer;
+		font-size: 0.9em;
+		a{
+			text-decoration: none;
+		}
+		p{
+			margin-top: 1rem;
+		}
+		.subrayado{
+			border-bottom: 1px solid $e-blue;
+		}
+	}
+
+	.btnEnviar_recibirPromos{
+		@extend .whiteText;
+		background-color: #f26607;
+		padding-top: 2.2rem;
+		border: none;
+		padding: 0.5rem 1rem;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 900;
+		border-radius: 0.3em;
+		outline: none;
+		cursor: pointer;
+	}
+
+	.btnSiguiente_recibirPromos{
+		@extend .bg.white;
+		border: 1px solid #f3873f;
+		color: #f3873f;
+		padding-top: 2.2rem;
+		padding: 0.5rem 1rem;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 900;
+		border-radius: 0.3em;
+		outline: none;
+		cursor: pointer;
+	}
+
+	.error{
+		@extend .DINNextLTProLight;
+		color: #b50101;
+		font-size: 0.87em;
+	}
+
+	.contenc{
+		display: block;
+		padding: 0px;
+		font-size: 1rem;
+		text-align: left;
+		input[type="checkbox"]{
+			display: none;
+			&:checked + label:before{
+				@extend .whiteText;
+				@extend .bg.blue;
+				font-family: 'Font Awesome 5 Solid';
+				content: "\f00c";
+				font-size: 0.9rem;
+				padding-left: 0.1rem;
+				display: block;
+				cursor: pointer;
+			}
+		}
+
+		label{
+			@extend .blueText;
+			margin-top: 0rem;
+			padding: 5px 15px 5px 51px;
+			display: inline-block;
+			position: relative;
+			font-size: 1rem;
+			border-radius: 3px;
+			cursor: pointer;
+			&:before{
+				content:"";
+				width: 19px;
+				height: 21px;
+				display: inline-block;
+				background: none;
+				border: 1px solid $e-blue;
+				border-radius: 5%;
+				position: absolute;
+				left: 17px;
+				top: 4px;
+			}
+
+			a{
+				font-weight: 900;
+				font-size: ( 14 / $base-font )+rem;
+				text-decoration: underline;
+			}
+
+		}
+	}
+
+	.cerrarModal{
+		span{
+			color: #195aa3;
+			font-size: 2.5em;
+			position: absolute;
+			top: -0.3em;
+			right: 0.15em;
+			cursor: pointer;
+		}
+	}
+
+	.marginTop5em {
+		margin-top: 5.27em;
+	}
+
+	.tituloModalidad{
+		@extend .DINNextLTProRegular;
+		@extend .blueText;
+		font-size: 1.2em;
+		line-height: 1.1em;
+		margin-bottom: 1em;
+	}
+
+	.backToModalEnviar{
+		@extend .hide;
+		i{
+			color: #195aa3;
+			font-size: 1.5em;
+			position: absolute;
+			top: 0.29em;
+			left: 0.5em;
+			cursor: pointer;
+		}
+	}
+
+	.marBottom1em{
+		margin-bottom: 1em;
+	}
+
+	.disabledText{
+		color: rgba(115, 108, 108, 0.49);
+	}
+
+	.anchoModalNew{
+		width: 94%;
+		margin: 0 auto;
+	}
+
+	.onlyDesktop{
+		display: none;
+	}
+}
+
+@media (min-width: 770px) {
+	.modalRecibirPromos{
+		.onlyDesktop{
+			display: block !important;
+		}
+
+		.onlyMobile{
+			display: none;
+		}
+
+		.titulo{
+			text-align: center !important;
+			font-size: 1.5em !important;
+			font-family: DINNextLTProRegular !important;
+		}
+
+		#formRecibirPromos{
+			padding: 0em 1.5em;
+		}
+
+		.soliExitosa .tituloGenial {
+			font-size: 1.6em;
+			line-height: 1.7em;
+		}
+
+		.anchoDesktopGenial{
+			width: 60%;
+			margin: 0 auto;
+		}
+
+		.btnEnviar_recibirPromos{
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.anchoLosentimosBtn{
+			width: 50% !important;
+		}
+
+		.tituloModalidad{
+			text-align: center;
+			font-size: 1.5em !important;
+		}
+
+		#modalidadPrefieres{
+			text-align: center;
+		}
+
+		.tercerlabel{
+			margin-left: -0.1em;
+		}
+
+		.segundoLabel{
+			margin-left: 2px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.modalRecibirPromos{
+		.maxDesk{
+			max-width: 60% !important;
+			margin: 0 auto;
+		}
+	}
+}

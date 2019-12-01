@@ -1,0 +1,527 @@
+
+.entel {
+    &-body {
+        .entel {
+            &-form {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                outline: 0;
+                position: fixed;
+                overflow: hidden;
+                -webkit-overflow-scrolling: touch;
+                background-color: rgba(0, 0, 0, 0.3);
+
+                &--close {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: visibility 0s .2s, opacity .2s linear;
+                }
+
+                &--open {
+                    opacity: 1;
+                    z-index: 100;
+                    visibility: visible;
+                    transition: opacity .2s linear;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    transition: all 0.3s;
+                }
+            }
+
+            &-form-televenta {
+                left: 50%;
+                top: 50%;
+                position: fixed;
+                transform: translate(-50%, -50%);
+
+                &--close {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: visibility 0s .2s, opacity .2s linear;
+                    -webkit-backface-visibility: hidden;
+                    -moz-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    -webkit-transform: translateX(-50%) translateY(-50%);
+                    -moz-transform: translateX(-50%) translateY(-50%);
+                    -ms-transform: translateX(-50%) translateY(-50%);
+                    transform: translateX(-50%) translateY(-50%);
+                }
+
+                &--open {
+                    opacity: 1;
+                    z-index: 200;
+                    height: 480px;
+                    visibility: visible;
+                    transition: opacity .2s linear;
+                }
+
+                &__content {
+                    opacity: 0;
+                    width: 300px;
+                    padding: 14px;
+                    height: 400px;
+                    position: relative;
+                    border-radius: 30px;                    
+                    background: linear-gradient(89.93deg,#004fb9 1.66%,#0360de 99.93%);
+                    -webkit-transform: translateY(20%);
+                    -moz-transform: translateY(20%);
+                    -ms-transform: translateY(20%);
+                    transform: translateY(20%);
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    transition: all 0.3s;
+
+
+                    &--active {
+                        opacity: 1;
+                        -webkit-transform: translateY(0);
+                        -moz-transform: translateY(0);
+                        -ms-transform: translateY(0);
+                        transform: translateY(0);
+                    }
+                    
+                    
+                    @media screen and (min-width: 768px) {
+                        width: 400px;
+                        height: 430px;
+                        padding: 18px;
+                        margin: 0 auto;
+                    }
+                }
+
+                &__img {
+                    width: 200px;
+                    margin: 30px auto;
+                    text-align: center;
+
+                    h6 {
+                        color: $white;
+                        font-size: 20px;
+                        line-height: 20px;
+                        padding-left: 8px;
+                        padding-top: 30px;
+                    }
+
+                    img, h6 {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    @media screen and (min-width: 320px) { 
+                        margin: 20px auto 36px auto;
+
+                        img {
+                            width: 35%;
+                        }
+
+                        h6 {
+                            padding-top: 0;
+                        }
+                    }
+
+
+                    @media screen and (min-width: 768px) {
+                        img {
+                            width: 35%;
+                        }
+                                                    
+                        h6 {
+                            font-size: 35px;
+                            line-height: 0;
+                            padding-left: 8px;
+                            padding-top: 0;
+                        }
+                    }
+                }
+
+                &__close-element {
+                    &__close {
+                        top: 14px;
+                        width: 30px;
+                        right: 21px;
+                        height: 30px;
+                        cursor: pointer;
+                        position: absolute;
+                        border-radius: 50%;
+                        text-decoration: none;
+                        color: $blue-aqua;
+                        transition: transform .2s ease 0s;
+                        border: 2px solid $blue-aqua;
+                        
+                        &:hover {
+                            transform: scale(.9);
+                            -ms-transform: scale(.9); /* IE 9 */
+                            -webkit-transform: scale(.9); /* Safari */
+                            background-color: $blue-aqua;
+                        }
+                        
+                        &::before {
+                            top: 45%;
+                            left: 32%;
+                            content: url(https://enteltest.vteximg.com.br/arquivos/cross.png);
+                            position: absolute;
+                            transform: translateY(-45%);
+                        }
+
+                        &:hover::before {
+                            top: 50%;
+                            left: 32%;
+                            z-index: 1;
+                            position: absolute;
+                            content: url(https://enteltest.vteximg.com.br/arquivos/cross-white.png);
+                            transform: translateY(-45%);
+
+                        }
+                    }                
+                }
+
+                &__text {
+                    margin-bottom: 20px;
+                    text-align: center;
+                    line-height: 1;
+
+                    p {
+                        color: $white;
+                        font-size: 16px;
+                        margin: 0 0 9px 0;
+
+
+                        @media screen and (min-width: 768px) {
+                            font-size: 20px;
+                            margin-bottom: 18px;
+                        }
+                        
+                        a {
+                            font-size: 30px;
+                            font-weight: 900;
+                            color: $orange-tlv;
+                            text-decoration: none;
+                            font-family: $barlow; font-weight: 800;
+
+                            @media screen and (min-width: 768px) {
+                                font-size: 40px;
+                                pointer-events: none;
+                            }
+                        }
+                    }
+
+                }
+
+                &__form {
+                    width: 220px;
+                    height: 160px;
+                    margin: 0 auto;
+                    text-align: center;
+
+                    &__input {
+                        text-align: left;
+                        position: relative;
+                        margin-bottom: 21px;
+                        padding: 0 !important;
+                        border-bottom: none !important;
+
+                        @media screen and (min-width: 768px) {
+                            margin-bottom: 0;
+                        }
+
+                        span {
+                            left: 0;
+                            top: 13px;
+                            font-size: 16px;
+                            position: absolute;
+                            color: #6798c6;
+                            pointer-events: none;
+                            line-height: 1;
+                            transition: top 250ms ease, font-size 250ms ease, color 250ms ease;
+                    
+                            @media screen and (min-width: 768px) {
+                                font-size: 20px;
+                                top: 19px;
+                            }
+                    
+                            &.focus {
+                                top: 15px;
+                                right: 18px;
+                                color: #8abff1;
+                                font-size: 10px;
+                                text-align: right; 
+                               
+                                @media screen and (min-width: 768px) {
+                                    top: 20px;
+                                    right: 21px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        input[type="tel"] {
+                            z-index: 2;
+                            width: 100%;
+                            height: 40px;
+                            padding: 0 28px;
+                            font-size: 16px;
+                            border-style: none;
+                            margin-bottom: 11px;
+                            border-radius: 50px;
+                            background: $white;
+                            border:1px solid $white;
+                            line-height: 1;
+                        } 
+        
+                        input[type="tel"]:focus {
+                            outline: none;
+                        }
+
+                        @media screen and (max-width: 425px) {
+                            &__input {
+                                margin-bottom: 18px;
+                            }
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            &__input {
+                                margin-bottom: 24px;
+                            }
+                        }
+                    }
+
+                    .entel-button {
+                        left: 0;
+                        right: 0;
+                        outline: 0;
+                        margin: auto;
+                        height: 50px;
+                        width: 260px;
+                        bottom: -25px;
+                        color: $white;
+                        line-height: 1;
+                        font-size: 16px;
+                        position: absolute;
+                        padding: 16px 50px;
+                        border-radius: 50px;
+                        text-transform: uppercase;
+                        border: 2px solid #ff6702;
+                        background-color: $orange-tlv !important;
+                        font-weight: 700;
+
+                        &-disabled {
+                            background-color: #e1e4ea !important;
+                            border: 2px solid  #e1e4ea;
+                        }
+                    }
+
+                    label {
+                        display: block;
+                        font-size: 12px;
+                        
+                        a {
+                            color: $white;
+                            text-decoration: underline;
+                        }
+
+                        span {
+                            left: 28px;
+                            font-size: 16px;
+                            color: #0154a0;
+                        }
+
+                        &#celular-error.error {
+                            display: none !important;
+                        }
+                    }
+
+                    .entel-checkbox-small {
+                        padding-left: 50px;
+                        position: relative;
+
+                        i {
+                            top: -2px;
+                            left: 18px;
+                            content: "";
+                            width: 20px;
+                            height: 20px;
+                            bottom: 35px;
+                            border-radius: 3px;
+                            position: absolute;
+                            background-size: 80%;
+                            border: 1px solid $white;
+                            background-color: transparent;
+                            transition: background-color .25s ease;
+                        }
+
+                        span a.entel-link {
+                            font-size: 11px;
+                            @media screen and (min-width: 768px) {
+                                font-size: 13px;
+                            }
+                        }
+
+                        label.fake-label {
+                            display: none;
+                        }
+                    }
+
+                    label.entel-checkbox-small {
+                        span {
+                            top: 11px;
+                            color: $white;
+                            font-size: 11px;
+
+                            @media screen and (min-width: 768px) {
+                                font-size: 13px;
+                            }
+
+                        }
+
+                    }
+
+
+                    input[type="checkbox"],
+                    label[for="policy"] {
+                        cursor: pointer;
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    input[type="checkbox"] {
+                        -webkit-appearance: none;
+                        visibility: hidden;
+                    }
+                    
+                    input[type="checkbox"]:checked + label + i {
+                        opacity: 1;
+                        content: "";
+                        font-weight: 700;
+                        position: absolute;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-color: transparent;
+                        background-image: url(https://enteltest.vteximg.com.br/arquivos/check-tlv.png);
+                    }
+
+                    @media screen and (min-width: 320px) { 
+                        & {
+                            height: 110px;
+                        }
+                    }
+
+
+                    @media screen and (min-width: 768px) {
+
+                        & {
+                            width: 260px;
+                            height: 110px;
+
+                            input[type="tel"] {
+                                height: 50px;
+                                font-size: 16px;
+                                margin-bottom: 21px;
+                            }
+
+                            .fake {
+                                height: 50px;
+                            }
+
+                            input[type="submit"] {
+                                top: 30px;
+                                border: none;
+                                height: 50px;
+                                width: 260px;
+                                font-size: 16px;
+                                line-height: 3.6;
+                            }
+
+                            input[type="checkbox"]::before {
+                                left: 21px;
+                                bottom: -3px;
+                            }
+
+                            label.entel-checkbox-small {
+                                span {
+                                    top: 11px;
+                                    color: $white;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+
+                    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        color: $blue;
+                        font-size: 16px;
+                    }
+                    ::-moz-placeholder { /* Firefox 19+ */
+                        color: $blue;
+                        font-size: 16px;
+                    }
+                    :-ms-input-placeholder { /* IE 10+ */
+                        color: $blue;
+                        font-size: 16px;
+                    }
+                    :-moz-placeholder { /* Firefox 18- */
+                        color: $blue;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form,
+.thanks {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translate(0);
+    z-index: 0;
+
+    &.active {
+        opacity: 1;
+        z-index: 1;
+        transform: translate(0, -10);
+    }
+}
+
+.error#celular-error {
+    display: none !important;
+}
+
+
+.thanks.active {
+
+    h6, p, img {
+        color: $white;
+        transform: translate(0, 60%);
+    }
+
+    img {
+        width: 45%;
+    }
+
+    h6 {
+        padding: 0;
+        font-size: 30px;
+        line-height: 30px;
+        margin: 21px 0;
+    }
+
+    p {
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
+        line-height: normal;
+
+        @media screen and (min-width: 768px) {
+            width: 280px;
+            font-size: 25px;
+        }
+    }
+}

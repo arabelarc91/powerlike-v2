@@ -1,0 +1,58 @@
+.alternative-section {
+  margin: 40px 0 0 0;
+  background-color: #F2FAFC;
+
+  @media (min-width: $laptop-s) {
+    margin: 20px 0 0 0;
+  }
+  
+  h2 {
+      font-size: 15px;
+      line-height: 18px;
+      font-style: normal;
+      font-family: Barlow;
+      font-weight: normal;
+      margin-bottom: 10px;
+  }
+
+  h2,
+  .entel-slider-numbers {
+      text-align: center;
+  }
+
+  .entel-thumbnail-phone-card {
+      margin: 15px;
+      min-height: 375px;
+      background-color: white;
+      transition: transform .2s linear;
+
+      &__detail {
+          &__phone-plussign,
+          &__name {
+              strong {
+                  font-weight: 800;
+              }
+          }
+      }
+  }
+
+  @media screen and (min-width: $tablet-m) {
+      h2 {
+          font-size: 25px;
+          line-height: 30px;
+          margin-bottom: 27px;
+      }
+  }
+
+  @media screen and (min-width: $laptop-m) {
+      .entel-slider {
+          .slick-prev {
+              left: -21px !important;
+          }
+          
+          .slick-next {
+              right: -21px !important; 
+          }
+      }
+  }
+}

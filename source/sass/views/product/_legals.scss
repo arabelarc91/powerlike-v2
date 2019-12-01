@@ -1,0 +1,50 @@
+
+.entel-legals {
+  h2 {
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0 0 30px 0;
+    padding: 0 20px;
+
+    @media only screen and (min-width: $tablet-s) {
+      font-size: 35px;
+      margin: 0 0 40px 0;
+    }
+  }
+
+  .entel-container {
+    padding: 0;
+  }
+
+  .entel-accordion__content {
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 20px 0 20px 0;
+      font-weight: 500;
+
+      @media only screen and (min-width: $tablet-s) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &:first-child {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 0 12px 0;
+
+        @media only screen and (min-width: $tablet-s) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

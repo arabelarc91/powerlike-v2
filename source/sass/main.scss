@@ -1,0 +1,39 @@
+/*!
+  MAIN ENTEL
+*/
+
+// 1. Para la plantilla general solo se utilizara la Vars y Header --> vtex/css/theme.css
+// 2. Para el catalogo se utilizara Vars, Vendors , Components y Views (No utilizar Vars en el compilado ya que se esta utilizando en le Plantilla general) --> vtex/css/catalogue.css
+
+/*!
+  ENTEL PLANTILLA GENERAL
+*/
+// Vars
+@import 'base/index';
+/*!
+  END ENTEL PLANTILLA GENERAL
+*/
+
+/*!
+  ENTEL HEADER
+*/
+// Header
+//@import 'elements/index';
+/*!
+  END ENTEL HEADER
+*/
+
+/*!
+  ENTEL CATALOGO GENERAL
+*/
+// Vendors
+@import 'vendor/index';
+
+//Components
+
+//Views
+@import 'views/filter/entel-filter';
+
+/*!
+  END CATALOGO GENERAL
+*/

@@ -1,0 +1,62 @@
+@import  "_variables";
+
+@font-face {
+    font-family: 'DINCondensedBold';
+    //src: url('#{$font-path}/DINCondensedBold.ttf') format('truetype');
+    src: url('#{$font-path}/DINCondensedBold.ttf.css') format('truetype');
+}
+
+@font-face {
+    font-family: 'DINNextLTProBold';
+    //src: url('#{$font-path}/DINNextLTProBold.otf') format('truetype');
+    src: url('#{$font-path}/DINNextLTProBold.otf.css') format('truetype');
+}
+
+@font-face {
+    font-family: 'DINNextLTProLight';
+    //src: url('#{$font-path}/DINNextLTProLight.otf') format('truetype');
+    src: url('#{$font-path}/DINNextLTProLight.otf.css') format('truetype');
+}
+
+@font-face {
+    font-family: 'DINNextLTProMedium';
+    //src: url('#{$font-path}/DINNextLTProMedium.otf') format('truetype');
+    src: url('#{$font-path}/DINNextLTProMedium.otf.css') format('truetype');
+}
+
+@font-face {
+    font-family: 'DINNextLTProRegular';
+    //src: url('#{$font-path}/DINNextLTProRegular.otf') format('truetype');
+    src: url('#{$font-path}/DINNextLTProRegular.otf.css') format('truetype');
+}
+
+@font-face {
+    font-family: 'DINNextLTProUltraLight';
+    //src: url('#{$font-path}/DINNextLTProUltraLight.otf') format('truetype');
+    src: url('#{$font-path}/DINNextLTProUltraLight.otf.css') format('truetype');
+}
+
+.DINCondensedBold {
+    font-family: $din-condensed-bold;
+}
+
+.DINNextLTProBold {
+    font-family: $din-next-lt-pro-bold;
+}
+
+.DINNextLTProLight {
+    font-family: $din-next-lt-pro-light;
+}
+
+.DINNextLTProMedium {
+    font-family: $din-next-lt-pro-medium;
+}
+
+.DINNextLTProRegular {
+    font-family: $din-next-lt-pro-regular;
+}
+
+.DINNextLTProUltraLight {
+    font-family: $din-next-lt-pro-ultra-light;
+}
+

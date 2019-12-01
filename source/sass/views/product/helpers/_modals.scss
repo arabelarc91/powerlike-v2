@@ -1,0 +1,1031 @@
+.modali{
+	padding-left: 0 !important;
+	.modal-footer{
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.modal-header {
+		display: block;
+		align-items: flex-start;
+		justify-content: space-between;
+		text-align: right;
+		padding: 1rem;
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.imgFono{
+		width: 100%;
+	}
+
+	.marcaModelo{
+		@extend .textLeft;
+		font-size: 1rem;
+		h2{
+			@extend .blueText;
+			@extend .DINNextLTProLight;
+			font-size: (24 / $base-font )+rem;
+			margin: 0;
+		}
+
+		p{
+			@extend .blueText;
+			@extend .DINNextLTProBold;
+			font-size: ( 14 / $base-font )+rem;
+			margin: 0;
+			&.detail{
+				@extend .DINNextLTProLight;
+				font-size: ( 12 / $base-font )+rem;
+			}
+		}
+	}
+
+	.recuadroModal{
+		border: 1px solid $e-text-disabled;
+		padding: 0rem;
+		position: relative;
+		&.equipoLibre{
+			.tleft{
+				@extend .textLeft;
+			}
+			.tRight{
+				@extend .textRight;
+			}
+		}
+
+		&.disabled{
+			@extend .disabledText;
+			.onlyWeb{
+				@extend .disabledText;
+				border: 1px solid $e-text-disabled;
+			}
+			.prices{
+				@extend .disabledText;
+			}
+		}
+
+		.onlyWeb{
+			@extend .linkText;
+			@extend .bg.grey;
+			@extend .DINNextLTProMedium;
+			position: absolute;
+			border: 1px solid $e-links;
+			top: -0.6rem;
+			left: 33%;
+			right: 33%;
+			font-size: ( 12 / $base-font ) + rem;
+		}
+
+		.detailPrice{
+			&.noStock{
+				@extend .blueText;
+				padding: 1rem;
+			}
+		}
+
+		.prices{
+			@extend .blueText;
+			padding: 0rem;
+			display: inline-block;
+			vertical-align: text-top;
+			margin-top: 1rem;
+			h4{
+				@extend .DINNextLTProBold;
+				margin: 0rem;
+				font-size: ( 24 / $base-font ) + rem;
+				font-weight: 900;
+			}
+			p{
+				font-size: ( 12 / $base-font ) + rem;
+			}
+			&.textAdd{
+				p{
+					@extend .textRight;
+					font-size: ( 14 / $base-font ) + rem;
+				}
+			}
+			&.priceBefore{
+				@extend .textCenter;
+				p{
+					@extend .blueLightText;
+					text-decoration:line-through;
+					margin: 0;
+				}
+				h4{
+					font-size: ( 28 / $base-font ) + rem;
+				}
+			}
+		}
+
+		.mas{
+			@extend .orageText;
+			margin-top: 1.5rem;
+			font-weight: 900;
+			font-size: 1.5rem;
+			vertical-align: middle;
+		}
+	}
+
+	.formulario{
+		.error{
+			@extend .DINNextLTProLight;
+			@extend .redText;
+			font-size: ( 13 / $base-font ) + rem;
+			margin: 0;
+		}
+
+		.input-error-validation{
+			@extend .redText;
+			border-bottom: 1px solid $e-red;
+			&::placeholder{
+				@extend .redText;
+			}
+		}
+
+		[data-visible="true"]{
+			display: block;
+		}
+		[data-visible="false"]{
+			display: none;
+		}
+
+		p{
+			@extend .textCenter;
+			@extend .blueText;
+			@extend .DINNextLTProLight;
+			padding-top: 1rem;
+			font-size: ( 24 / $base-font )+rem;
+			margin:0;
+		}
+
+		input{
+			@extend .DINNextLTProLight;
+			@extend .bg.transparent;
+			@extend .blueText;
+			width: 100%;
+			padding: 1.5rem 0.5rem 0rem 0rem;
+			border: none;
+			border-bottom: 1px solid $e-blue;
+			outline: none;
+			padding-right: 26px;
+			padding-left: 0;
+			&::placeholder{
+				@extend .blueText;
+			}
+		}
+
+		.contenc{
+			display: inline;
+			padding: 0px;
+			font-size: 0.7rem;
+			text-align: center;
+			.checkboxes{
+				display: none;
+				&:checked+label:before{
+					@extend .whiteText;
+					@extend .bg.orange;
+					font-family: 'Font Awesome 5 Solid';
+					content: "\f00c";
+					font-size: 0.7rem;
+					display: block;
+					cursor: pointer;
+				}
+			}
+
+			label{
+				@extend .blueText;
+				margin-top: 1rem;
+				padding: 5px 15px 15px 0;
+				display: inline-block;
+				position: relative;
+				font-size: 0.7rem;
+				border-radius: 3px;
+				text-align: right;
+				width: 100%;
+				cursor: pointer;
+				&:before{
+					content:"";
+					width: 19px;
+					height: 19px;
+					display: inline-block;
+					background: none;
+					border: 2px solid $e-orange;
+					border-radius: 3px;
+					position: absolute;
+					left: 10px;
+					top: 4px;
+				}
+
+				a{
+					font-weight: 900;
+					font-size: ( 14 / $base-font )+rem;
+					text-decoration: underline;
+				}
+
+			}
+
+			span{
+				@extend .DINNextLTProLight;
+				@extend .redText;
+				font-size: ( 13 / $base-font ) + rem;
+				margin: 0;
+			}
+		}
+
+		.selectLabel{
+			@extend .blueText;
+			font-weight: 900;
+			font-size: ( 11 / $base-font ) + rem;
+			margin-bottom: 0rem;
+			margin-top: 0.5rem;
+		}
+
+		.select {
+			@extend .DINNextLTProLight;
+			@extend .textLeft;
+			display: block;
+			position: relative;
+			margin: 0px;
+			font-size: 1rem;
+			cursor: pointer;
+			&.disabled{
+				.title{
+					@extend .disabledText;
+					border-bottom: 1px solid $e-text-disabled;
+					cursor: not-allowed;
+				}
+			}
+
+			.title {
+				@extend .blueText;
+				@extend .textLeft;
+				display: block;
+				text-transform: none;
+				cursor: pointer;
+				border-bottom: 1px solid $e-blue;
+				padding: 10px 0px 10px 10px;
+				position: relative;
+				font-size: (16 / $base-font) + rem;
+				font-weight: 400;
+				margin-bottom: 0.5rem;
+				&:after{
+					font-size: 0.9rem;
+					font-family: "Font Awesome 5 Solid";
+					line-height: 1;
+					content: "\f078";
+					display: block;
+					position: absolute;
+					top: (16 / $base-font) + rem;
+					right: 0rem;
+				}
+			}
+
+			.options {
+				@extend .bg.white;
+				display: none;
+				z-index: 10;
+				width: 100%;
+				top: (37 / $base-font) + rem;
+				left: 0;
+				position: absolute;
+				border: 1px solid $e-text-disabled;
+				z-index: 20;
+				padding: 0px 10px;
+				cursor: pointer;
+				.option {
+					@extend .blueText;
+					display: block;
+					cursor: pointer;
+					font-size: (14 / $base-font) + rem;
+					font-weight: 300;
+					border-bottom: 1px solid $e-text-disabled;
+					padding: 12px 0px;
+					text-decoration: none;
+					&:hover{
+						font-weight: 900;
+					}
+				}
+			}
+		}
+
+		.btnEnviar{
+			@extend .DINNextLTProBold;
+			@extend .bg.orange;
+			@extend .whiteText;
+			padding-top: 2.2rem;
+			border: none;
+			padding: 0.5rem 1rem;
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 900;
+			cursor: pointer;
+			&.disable{
+			  @extend .bg.disabled;
+			  pointer-events: none;
+			}
+		}
+	}
+
+	.closeS{
+		@extend .bg.white;
+		@extend .orageText;
+		font-weight: 900;
+		border: 2px solid $e-orange !important;
+		border-radius: 40px;
+		padding: 0.1rem 0.55rem !important;
+		cursor: pointer;
+	}
+}
+
+.modalPlanes{
+	padding-right: 0;
+	padding-left: 0;
+	padding-left: 0 !important;
+	.modal-body{
+		padding: 0rem 1rem;
+
+		.row {
+			margin: 0 !important;
+		}
+
+	}
+	.select {
+		@extend .DINNextLTProLight;
+		@extend .textLeft;
+		display: block;
+		margin: 0px;
+		font-size: 1rem;
+		cursor: pointer;
+		&.disabled{
+			.title{
+				@extend .disabledText;
+				border-bottom: 1px solid $e-text-disabled;
+				cursor: not-allowed;
+			}
+		}
+
+		&.cuotas{
+			.options{
+				.option{
+					display: block;
+				}
+			}
+		}
+
+		.title {
+			@extend .blueText;
+			@extend .textLeft;
+			display: block;
+			text-transform: none;
+			cursor: pointer;
+			position: relative;
+			font-size: (16 / $base-font) + rem;
+			font-weight: 400;
+			&:after{
+				font-size: 0.9rem;
+				font-family: "Font Awesome 5 Solid";
+				line-height: 1;
+				content: "\f078";
+				display: block;
+				position: absolute;
+				top: (16 / $base-font) + rem;
+				right: 0rem;
+				color: #fff;
+			}
+		}
+
+		.options {
+			@extend .bg.white;
+			display: none;
+			z-index: 10;
+			width: 100%;
+			top: 4rem;
+			left: 0;
+			position: absolute;
+			border: 1px solid $e-text-disabled;
+			z-index: 20;
+			padding: 0px 10px;
+			cursor: pointer;
+			.option {
+				@extend .blueText;
+				display: none;
+				cursor: pointer;
+				font-size: (14 / $base-font) + rem;
+				font-weight: 300;
+				border-bottom: 1px solid $e-text-disabled;
+				padding: 12px 0px;
+				text-decoration: none;
+				&:hover{
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+	.maxDesk{
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.textInicio{
+		@extend .DINNextLTProLight;
+		@extend .blueText;
+		@extend .textCenter;
+		font-size: ( 20 / $base-font )+rem;
+	}
+
+	.modal-footer{
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.modal-header {
+		display: block;
+		align-items: flex-start;
+		justify-content: space-between;
+		text-align: right;
+		padding: 0.5rem 1rem;
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	.closeS{
+		@extend .bg.white;
+		@extend .orageText;
+		font-weight: 900;
+		border: 2px solid $e-orange !important;
+		border-radius: 40px;
+		// padding: 0.1rem 0.55rem !important;
+		cursor: pointer;
+	}
+
+	.planElegido{
+		padding: 0rem 0.25rem 0rem 0rem;
+
+		.title{
+			@extend .DINNextLTProBold;
+			@extend .orageText;
+			@extend .textCenter;
+			font-size: 14px;
+		}
+
+		.minutosContainer > p{
+			margin: 0 !important;
+		}
+
+		.contentHorasVideo {
+			.horasVideo {
+				font-size: 20px;
+				@extend .DINNextLTProBold;
+				margin: 0 !important;
+			}
+		}
+
+		.grid{
+			@extend .textCenter;
+			border-left: 1px solid $e-orange;
+			border-right: 1px solid $e-orange;
+			border-top: 1px solid $e-orange;
+			padding: 12px 0.5rem;
+
+			
+			p{
+				@extend .DINNextLTProLight;
+				@extend .blueText;
+				margin: 0 0 5px 0;
+				
+				&.dato{
+					@extend .DINNextLTProLight;
+					color: #000;
+				}
+				
+				&.capacidad{
+					@extend .DINNextLTProBold;
+					font-size: ( 20 / $base-font ) + rem;
+				}
+				
+				&.minSmsRom{
+					margin: 0 !important;
+					@extend .DINNextLTProBold;
+					font-size: ( 20 / $base-font ) + rem;
+				}
+				
+				&.capacidad {
+					margin: 0;
+				}
+			}
+
+			.logos{
+				display: inline-block;
+				img{
+					padding: 4px 3px;
+					&.appsDisponibles,
+					&.appsDisponiblesRomming,
+					&.appsDisponiblesVideo{
+						display: none;
+					}
+				}
+			}
+
+		}
+
+		div.col-12.grid.lastGrid {
+			min-height: 127px;
+			border-bottom: 1px solid $e-orange;
+
+			@media (min-width: 1024px) {
+				min-height: 110px;
+			}
+
+			p {
+				margin: 0 !important;
+			}
+			
+			.col-12.center-apps.logos {
+				text-align: center;
+				margin-bottom: 7px;
+			}
+
+			.viewZone {
+				display: block;
+				font-size: 12px;
+				line-height: 19px;
+				text-align: center;
+				@extend .DINNextLTProBold;
+				text-decoration: underline !important;
+			}			
+		}
+
+		.plan{
+			@extend .whiteText;
+			@extend .bg.orange;
+			position: relative;
+			padding: 0.5rem;
+			margin-bottom: 0.5rem;
+			p{
+				@extend .whiteText;
+				margin-bottom: 0;
+			}
+			.titulo{
+				@extend .DINNextLTProBold ;
+				@extend .whiteText;
+				margin-top: 0rem;
+				font-size: 14px;
+			}
+		}
+	}
+
+	.planEntel{
+		.title{
+			@extend .DINNextLTProBold;
+			@extend .blueText;
+			@extend .textCenter;
+			font-size: 14px;
+		}
+
+		padding: 0rem 0rem 0rem 0.25rem;
+
+		.minutosContainer > p{
+			margin: 0 !important;
+		}
+
+		.contentHorasVideo {
+			.horasVideo {
+				font-size: 20px;
+				@extend .DINNextLTProBold;
+				margin: 0 !important;
+			}
+		}
+
+		.grid{
+			@extend .textCenter;
+			border-left: 1px solid $e-blue;
+			border-right: 1px solid $e-blue;
+			border-top: 1px solid $e-blue;
+			padding: 12px 0.5rem;
+
+			&:last-child {
+				border-bottom: 1px solid $e-blue;
+			}
+
+
+			p{
+				@extend .DINNextLTProLight; 
+				@extend .blueText;
+				margin: 0 0 5px 0;
+
+				&.dato{
+					@extend .DINNextLTProLight;
+					color: #000;
+				}
+
+				&.capacidad{
+					@extend .DINNextLTProBold;
+					font-size: ( 20 / $base-font ) + rem;
+				}
+
+				&.minSmsRom{
+					margin: 0 !important;
+					@extend .DINNextLTProBold;
+					font-size: ( 20 / $base-font ) + rem;
+				}			
+
+				&.capacidad {
+					margin: 0 !important;
+				}
+			}
+
+			.logos{
+				display: inline-block;
+				img{
+					padding: 4px 3px;
+
+					&.appsDisponibles,
+					&.appsDisponiblesRomming,
+					&.appsDisponiblesVideo{
+						display: none;
+					}
+				}
+			}
+		}
+
+		div.col-12.grid.lastGrid {
+			min-height: 127px;
+			border-bottom: 1px solid $e-blue;
+
+			@media (min-width: 1024px) {
+				min-height: 110px;
+			}
+
+			p {
+				margin: 0 !important;
+			}	
+
+			.col-12.center-apps.logos {
+				text-align: center;
+				margin-bottom: 7px;
+			}
+
+			.viewZone {
+				display: block;
+				font-size: 12px;
+				line-height: 19px;
+				text-align: center;
+				@extend .DINNextLTProBold;
+				text-decoration: underline !important;
+			}	
+		}
+
+		.plan{
+			@extend .bg.blue;
+			margin-bottom: 0.5rem;
+			padding: 0.5rem;
+			p{
+				@extend .whiteText;
+				margin-bottom: 0;
+			}
+			.titulo{
+				@extend .DINNextLTProBold;
+				@extend .whiteText;
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.btnConti{
+		@extend .DINNextLTProBold;
+		@extend .bg.orange;
+		@extend .whiteText;
+		border: 0;
+		width: 100%;
+		padding: 0.5rem 0rem;
+		cursor: pointer;
+	}
+
+	.contenc{
+		display: inline;
+		padding: 0px;
+		font-size: 0.7rem;
+		text-align: center;
+		input[type="radio"]{
+			display: none;
+			&:checked + label:before{
+				@extend .whiteText;
+				@extend .bg.orange;
+				font-family: 'Font Awesome 5 Solid';
+				content: "\f00c";
+				font-size: 0.7rem;
+				display: block;
+				cursor: pointer;
+			}
+		}
+
+		label{
+			@extend .blueText;
+			margin-top: 1rem;
+			padding: 5px 15px 15px 0;
+			display: inline-block;
+			position: relative;
+			font-size: 0.8rem;
+			border-radius: 3px;
+			text-align: right;
+			width: 100%;
+			cursor: pointer;
+			&:before{
+				content:"";
+				width: 19px;
+				height: 19px;
+				display: inline-block;
+				background: none;
+				border: 2px solid $e-orange;
+				border-radius: 3px;
+				position: absolute;
+				left: 10px;
+				top: 4px;
+			}
+
+			a{
+				font-weight: 900;
+				font-size: ( 14 / $base-font )+rem;
+				text-decoration: underline;
+			}
+
+		}
+	}
+}
+
+.modalGracias{
+	.modal-footer{
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.modal-header {
+		display: block;
+		align-items: flex-start;
+		justify-content: space-between;
+		text-align: right;
+		padding: 1rem;
+		border: none;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.closeS{
+		@extend .bg.white;
+		@extend .orageText;
+		font-weight: 900;
+		border: 2px solid $e-orange !important;
+		border-radius: 40px;
+		//padding: 0.1rem 0.55rem !important;
+		cursor: pointer;
+	}
+
+	.soliExitosa,
+	.soliError{
+		width: 100%;
+		text-align: center;
+		padding: 5rem 2rem;
+
+		hr{
+			width: 70%;
+		}
+
+		img{
+			width: 6rem;
+			padding: 1rem;
+		}
+
+		.titulo{
+			@extend .DINNextLTProLight;
+			@extend .blueText;
+			font-size: ( 24 / $base-font )+rem;
+		}
+
+		.texto{
+			p{
+				@extend .DINNextLTProLight;
+				@extend .blueText;
+				font-size: ( 16 / $base-font )+rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.modali{
+		.recuadroModal{
+			.prices {
+				p {
+					font-size: 0.59rem;
+				}
+			}
+		}
+	}
+
+	.modalPlanes .planEntel .grid .logos img {
+		width: auto;
+	}
+
+	.modalPlanes .planElegido .grid .logos img {
+		width: auto;
+	}	
+}
+
+@media (max-width: 321px) {
+	.modalPlanes{
+		.planEntel{
+			.title{
+				font-size: 0.7rem;
+			}
+			.plan{
+				.planDetalle{
+					.title{
+						font-size: 0.8rem;
+					}
+				}
+			}
+
+			.grid {
+
+				.logos {
+
+					img {
+						width: 1.6rem;
+					}
+				}
+			}
+		}
+
+
+		.planElegido{
+			.title{
+				font-size: 0.7rem;
+			}
+			.plan{
+				.titulo{
+					font-size: 0.8rem;
+				}
+			}
+
+			.grid {
+
+				.logos {
+
+					img {
+						width: 1.6rem;
+					}
+				}
+			}			
+		}
+
+	}
+}
+
+@media (min-width: 992px) {
+	.modali{
+		.imgFono{
+			width: 70%;
+		}
+
+		.formulario{
+			p{
+				text-align: left;
+				padding-top: 0;
+			}
+		}
+
+		.marcaModelo{
+			text-align: center;
+		}
+
+		.centerDesk{
+			text-align: center;
+		}
+
+		.recuadroModal{
+			.onlyWeb {
+				position: absolute;
+				border: 1px solid $e-links;
+				top: -0.6rem;
+				left: 40%;
+				right: 40%;
+				font-size: 0.75rem;
+			}
+		}
+	}
+
+	.modalPlanes{
+		.modal-xx{
+			max-width: 1024px;
+		}
+		.planElegido .grid {
+			.logos {
+				img {
+					width: 2rem;
+					padding: 4px 3px;
+				}
+			}
+		}
+
+		.planEntel {
+			.grid {
+				.logos {
+					img {
+						width: 2rem;
+						padding: 4px 3px;
+					}
+				}
+			}
+		}
+
+		.contentHorasVideo {
+			.horasVideo {
+				width: auto;
+				font-size: 20px;
+				line-height: 20px;
+				text-align: right;
+				margin: 0!important;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.logos {
+				padding: 0;
+				width: auto;
+				line-height: 20px;
+				text-align: left;
+				vertical-align: middle;
+				display: inline-block;
+			}
+		}
+
+		.lastGrid {
+			.capacidadRomming {
+				width: auto;
+				font-size: 20px;
+				line-height: 20px;
+				text-align: right;
+				margin: 0!important;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.logos {
+				padding: 0;
+				width: auto;
+				line-height: 20px;
+				text-align: left;
+				vertical-align: middle;
+				display: inline-block;
+			}			
+		}
+		
+		.maxDesk{
+			max-width: 70% !important;
+			margin: 0 auto;
+		}
+
+		.btnConti{
+			width: 50% !important;
+			margin: 0 auto;
+		}
+	}
+
+	.modalPlanes .contenc label {
+		padding: 5px 0 15px 0 !important;
+		text-align: center;
+		width: 100%;
+		&:before{
+			content:"";
+			left: 52px;
+			top: 4px;
+		}	
+	}	
+}
+
+.personas .empresasLinks {
+	display: none;
+}
+
+.empresasLinks {
+	min-height: 73px;
+
+	@media (min-width: 1024px) {
+		min-height: 43px;
+	}
+
+	a {
+		font-size: 12px;
+		line-height: 19px;
+		text-align: center;
+		text-decoration: underline !important;
+		font-family: DINNextLTProBold;
+		padding: 2px;
+		margin: 0 4px;
+	}
+}

@@ -1,0 +1,201 @@
+.entel-checkout-campaign {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    z-index: 999;
+    background: linear-gradient(180deg, #004FB9 0%, #00B9EB 248.89%);
+
+    @media (min-width: 768px) {
+        width: 403px;
+        right: 95px;
+    }
+
+    .disable {
+        display: none;
+    }
+
+    .img-itbk {
+        position: absolute;
+        right: -15px;
+        bottom: 0;
+    }
+
+    .text-notice {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 102%;
+        font-weight: bold;
+        color: #FFF;
+        width: 193px;
+
+        span {
+            color: #2FCBF1;
+            font-weight: normal;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: -18px;
+        right: 8px;
+        width: 66px;
+        height: 18px;
+        background: #FF560A;
+        border-radius: 8px 8px 0 0;
+        padding: 4px 0 0 7px;
+        cursor: pointer;
+                
+        p {
+            font-weight: 500;
+            font-size: 9px;
+            line-height: 105%;
+            color: #FFF;
+            text-decoration: underline; 
+        }
+
+        &__arrow {
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            width: 5px;
+            height: 11px;
+            background: none;
+            transition: transform 0.4s;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-left: none;
+                border-top: none;
+                border-right: 2px solid #FFFFFF;
+                border-bottom: 2px solid #FFFFFF;
+                -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
+                transition: all 200ms ease 0s;
+            }
+        }
+
+        .rotate-arrow {
+            top: 3px;
+
+            &::after {
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__notice {
+        padding: 15px 0 0 16px;
+        height: 77px;
+
+        @media (min-width: 768px) {
+            height: 84px;
+            padding: 24px 0 0 31px;
+        }
+
+        label {
+            margin: -13px 7px 0 0;
+            color: #FFF;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 100%;
+            background: #00B9EB;
+            border: 1px solid #00B9EB;
+            width: 18px;
+            height: 18px;
+        }
+        
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            position: relative;
+        }
+    }
+
+    &__steps {
+        height: 207px;   
+        color: #fff; 
+        padding: 14px 0 0 24px;
+
+        @media (min-width: 768px) {
+            height: 261px;
+            padding: 21px 0 0 31px;
+        }
+
+        h3 {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+
+            @media (min-width: 768px) {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 26px;
+
+            @media (min-width: 768px) {
+                font-size: 14px;
+                line-height: 26px;
+                margin-top: 18px;
+            }
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 102%;
+			display: block;
+			position: relative;
+            z-index: 1;
+            margin: 5px 0 9px 18px;     
+            
+            @media (min-width: 768px) {
+                margin: 5px 0 12px 18px;    
+            }
+            
+            span {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                text-align: center;
+                border-radius: 100%;
+                background: #00B9EB;
+                border: 1px solid #00B9EB;
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                display: block;
+                margin: -2px 0 0 -22px;
+            } 
+        }
+
+        &__title {
+            display: -webkit-inline-box;
+            margin-bottom: -10px;
+
+            img {
+                margin: -7px 5px 0;
+                width: 63px;
+
+                @media (min-width: 768px) {
+                    margin: -2px 5px 0;
+                }
+            }           
+        }
+    }
+}   

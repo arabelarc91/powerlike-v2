@@ -1,0 +1,218 @@
+.caracteristicSection{
+	@extend .bg.grey;
+	padding: 0.5rem 1rem;
+	.title{
+		@extend .blueText;
+		&.brand{
+			.brandName{
+				.brand{
+					@extend .blueText;
+					@extend .DINNextLTProBold;
+					@extend .upperCase;
+					font-size: 1rem;
+				}
+			}
+		}
+		&.product{
+			.productName{
+				@extend	.DINNextLTProLight;
+				@extend .upperCase;
+				font-size: ( 24 / $base-font ) + rem;
+			}
+		}
+		&.description{
+			font-size: 1rem;
+			font-weight: 900;
+		}
+	}
+	
+	.capacitySubSection{
+		@extend .DINNextLTProMedium;
+		font-size: ( 14 / $base-font ) + rem;
+		display: block;
+		font-size: 1rem;
+		margin: 0.5rem 0rem;
+		.ordenCapacidad{
+			justify-content: space-around;
+			display: flex;
+		}
+		.capacityOption{
+			@extend .blueText;
+			display: inline-block;
+			text-decoration: none;
+			padding: 0.5rem;
+			border: 1px solid $e-text-disabled;
+			margin-right: 1rem;
+			margin-bottom: 0.6rem;
+			cursor:pointer;
+			&.active{
+				@extend .orageText;
+				border: 1px solid $e-orange;
+			}
+		}
+		hr{
+			margin-top: 0.5rem;
+			margin-bottom: 0rem;
+		}
+		.capacidad{
+			display: inline-block;
+			h2{
+				@extend .hide;
+			}
+			ul{
+				list-style: none;
+				margin: 0rem;
+				padding: 0rem;
+				li{
+					display: inline-block;
+				}
+			}
+		}
+	}
+	
+	.colorsSubSection{
+		display: block;
+		font-size: 1rem;
+		margin: 0.5rem 0rem;
+		hr{
+			margin-top: 0.5rem;
+			margin-bottom: 0rem;
+		}
+		.ordenColor{
+			justify-content: space-around;
+			display: flex;
+			&.desk{
+				display: inline-block;
+			}
+			.colorpick{
+				margin: 1rem;
+				border-radius: 50%;
+				cursor:pointer;
+				position: relative;
+				&:before{
+					content: "";
+					border: 1px solid $e-text-disabled;
+					width: 1.5rem;
+					height: 1.5rem;
+					display: inline-block;
+					border-radius: 50%;
+					&.yellow{
+						@extend .bg.yellow;
+					}
+					&.blue{
+						@extend .bg.blueCircle;
+					}
+					&.red{
+						@extend .bg.red;
+					}
+					&.orange{
+						@extend .bg.orangeCircle;
+					}
+					&.white{
+						@extend .bg.white;
+					}
+					&.black{
+						@extend .bg.black;
+					}
+					&.spaceGray{
+						@extend .bg.spaceGray;
+					}
+					&.anotherGray{
+						@extend .bg.anotherGray;
+					}
+					&.anotherBlue{
+						@extend .bg.anotherBlue;
+					}
+					&.gold{
+						@extend .bg.gold;
+					}
+					&.metalic{
+						@extend .bg.metalic;
+					}
+					&.titan{
+						@extend .bg.titan;
+					}
+					&.blackBlue{
+						@extend .bg.blackBlue;
+					}
+					&.anotherRed{
+						@extend .bg.anotherRed;
+					}
+					&.flashGrey{
+						@extend .bg.flashGrey;
+					}
+					&.deepIndigo{
+						@extend .bg.deepIndigo;
+					}
+					&.pink{
+						@extend .bg.pink;
+					}
+					&.silver{
+						@extend .bg.silver;
+					}
+					&.brown{
+						@extend .bg.brown;
+					}
+					&.lilac{
+						@extend .bg.lilac;
+					}
+					&.blueSilver{
+						@extend .bg.blueSilver;
+					}
+					&.lavender{
+						@extend .bg.lavender;
+					}
+					&.midnightBlack{
+						@extend .bg.midnightBlack;
+					}
+				}
+				&.active{
+					&:before{
+						border: 1px solid $e-orange;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.caracteristicSection{
+		.title{
+			&.brand{
+				font-size: 1rem;
+			}
+			&.product{
+				font-size: ( 40 / $base-font ) + rem;
+			}
+			&.description{
+				display:inline-block;
+				padding-right: 1rem;
+			}
+		}
+		
+		.capacitySubSection{
+			.capacityOption{
+				&:hover{
+					color: $e-orange;
+					border: 1px solid $e-orange;
+				}
+			}
+			.ordenCapacidad{
+				display: inline-block;
+			}
+		}
+		
+		.colorsSubSection{
+			.ordenColor{
+				display: inline-block;
+				.colorpick{
+					margin: 2rem;
+					&:before{
+						position: absolute;
+					}
+				}
+			}
+		}
+	}
+}

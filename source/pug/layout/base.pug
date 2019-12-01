@@ -1,0 +1,52 @@
+//- Vars
+-let base_url = '/'
+-let img_path = '../../images/'
+-let title_page = 'Entel Perú | Powerlike'
+-let keywords = 'Planes, Telefonía Móvil, Internet Móvil, Banda Ancha Móvil, iPhone, Apple, Samsung, OWN, Equipos, Teléfonos, Modems, Cobertura, 4G, 3G, iDEN'
+-let description = 'Un Perú mejor conectado es posible. Contrata planes de Telefonía Móvil, smartphones con 4G, Internet y otros servicios que te mantendrán siempre comunicado.'
+
+//- Conditions to compile
+if path == 'PROD'
+    -let base_url = 'https://catalogo.entel.pe/'
+    -let img_path = '/arquivos/'
+
+block globalvars
+    -let basedir = base_url + img_path
+
+//- Components
+include component/source_retina_img
+
+//- Structure
+
+doctype html
+html(lang="es" xml:lang="es")
+    head
+        title= title_page
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+
+        //- Metatags
+        meta(name='Keywords' content = keywords)
+        meta(name='Description' content = description)
+
+        link(href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,500,500i,700,700i" rel="stylesheet")
+        link(rel='stylesheet' href='../../css/views/filter/filter.css')
+        meta(property='og:type' content='website')
+        meta(property='og:site_name' content='Powerlike Entel')
+        meta(property='og:title' content='Powerlike Entel')
+        meta(property='og:description' content='Sí estás buscando celulares, en Powerlike tenemos todos los teléfonos al mejor precio. Conoce nuestras promociones.')
+        meta(property='og:url' content='')
+        meta(property='og:image' content='')
+        meta(property='fb:app_id' content='')
+
+    body
+        .entel-body
+            include ../shared/header.pug
+                
+            //- Main
+            block content
+
+        //- Script
+        script(type='text/javascript' src='../../script/jquery-1.12.4.min.js')
+        script(type='text/javascript' src='../../script/filter.js')

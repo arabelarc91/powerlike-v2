@@ -1,0 +1,72 @@
+{
+    "paths" : {
+        "build" : "./build",
+        "release" : "./release",
+        "source" : "./source"
+    },
+    "tasks": {
+        "browsersync" : {
+            "server" : {
+                "baseDir" : "./build",
+                "https" : true
+            },
+            "port" : "8000",
+            "browser": "Chrome",
+            "ghostMode": false,
+            "reloadDelay" : 1000
+        },
+        "js" : {
+            "src" : "script",
+            "dest" : "script",
+            "extensions": ["js"]
+        },
+        "script" : {
+            "src" : "script",
+            "dest" : "script",
+            "extensions": ["js"]
+        },
+        "html": {
+            "src" : "pug",
+            "dest": "./",
+            "options": {
+                "pretty": false
+            },
+            "excludeFolders": ["layout", "shared", "partials"],
+            "extensions": ["pug", "html"]
+        },
+        "css":{
+            "src" : "sass",
+            "dest" : "css",
+            "autoprefixer": {
+                "browsers" : ["last 3 versions"]
+            },
+            "sass" : {
+               "outputStyle": "expanded",
+               "errLogToConsole": true,
+               "includePaths" : [
+                    "./source/sass"
+               ]
+
+            },
+            "nano": {
+                "autoprefixer": false,
+                "zindex": false,
+                "normalizeUrl": {
+                    "stripWWW": false
+                }
+            },
+            "extensions": ["sass", "scss", "css"]
+        },
+        "images": {
+            "src": "images",
+            "dest": "images",
+            "extensions": ["jpg", "png", "svg", "gif"]
+        },
+
+        "fonts": {
+            "src": "fonts",
+            "dest": "fonts",
+            "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+        }
+    }
+}

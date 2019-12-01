@@ -1,0 +1,173 @@
+.gallerySection{
+	position: relative;
+	.labelsPromotion{
+		position: absolute;
+		top: 0rem;
+		left: 1rem;
+		.nroUno{
+			@extend .bg.orange;
+			@extend .whiteText;
+			@extend .DINNextLTProBold;
+			display: block;
+			padding: 0.3rem 1.3rem;
+			font-size: ( 10 / $base-font ) +rem;
+		}
+
+		.deliv, .superPromo,
+		.promoEntel, .promoNavidad,
+		.dosPorUno{
+			@extend .whiteText;
+			@extend .bg.links;
+			@extend .DINNextLTProBold;
+			display: block;
+			padding: 0.3rem 1rem;
+			font-size: ( 10 / $base-font ) +rem;
+		}
+	}
+
+	li{
+		&.active{
+			a{
+				img{
+					border: 1px solid $e-orange;
+				}
+			}
+		}
+	}
+
+	.lSSlideOuter .lSPager.lSGallery li.active, .lSSlideOuter .lSPager.lSGallery li:hover{
+		border-radius: 0;
+	}
+
+
+	.lightSlider{
+		li{
+			img{
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+
+	.lSSlideOuter.vertical{
+		position: relative !important;
+	}
+
+	.lSAction{
+		position: absolute;
+		top: 10rem;
+		width: 100%;
+		z-index: 1;
+		.btnPrev,
+		.btnNext{
+			@extend .orageText;
+			font-size: 2rem;
+			z-index: 2;
+			cursor: pointer;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.gallerySection{
+		.labelsPromotion{
+			left: 7rem;
+			.nroUno, .deliv,
+			.superPromo, .promoEntel,
+			.promoNavidad, .dosPorUno{
+				font-size: ( 14 / $base-font ) +rem;
+			}
+		}
+
+		#imageGallery{
+			margin-left: -3rem;
+		}
+
+		.pad-left{
+			padding-left: 70px;
+			padding-right: 0px !important;
+		}
+
+		.lSSlideOuter.vertical .lSGallery{
+			right: 0;
+			left: 0px !important;
+		}
+
+
+		.lSSlideWrapper{
+			position: static !important;
+		}
+
+		.lSAction{
+			position: absolute;
+			top: 2rem;
+			left: -8.5rem;
+			width: 100%;
+			z-index: 1;
+
+			.lSPrev{
+				display: none;
+				top: -2rem !important;
+			}
+			.lSNext{
+				top: 21rem !important;
+			}
+		}
+	}
+
+
+}
+
+@media (min-width: 992px) {
+	.gallerySection{
+		.labelsPromotion{
+			left: 7rem;
+			.nroUno, .deliv,
+			.superPromo, .promoEntel,
+			.promoNavidad, .dosPorUno{
+				font-size: ( 14 / $base-font ) + rem;
+			}
+		}
+
+		.lSSlideOuter.vertical .lSGallery{
+			right: 0;
+			left: 0px !important;
+		}
+
+		.pad-left{
+			padding-left: 70px;
+			padding-right: 0px !important;
+		}
+
+		.lightSlider{
+			li{
+				img{
+					text-align: center;
+					width: 90%;
+				}
+			}
+		}
+
+		.lSSlideWrapper{
+			position: static !important;
+		}
+
+		.lSAction{
+			position: absolute;
+			top: 2rem;
+			left:auto;
+			right: 45% !important;
+			width: 100%;
+			z-index: 1;
+
+			.lSPrev{
+				display: none;
+				top: -2rem !important;
+			}
+			.lSNext{
+				top: 21rem !important;
+			}
+		}
+	}
+}

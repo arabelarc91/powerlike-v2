@@ -1,0 +1,45 @@
+
+// Vars
+@import '../../base/index';
+
+// Components
+ 
+
+// Theme reset
+@import '../../theme/index';
+
+// bootstrap
+@import "helpers/_variables";
+@import "vendor/fontawesome/brands";
+@import "vendor/fontawesome/solid";
+@import "vendor/fontawesome/regular";
+@import "vendor/fontawesome/fontawesome";
+@import "vendor/bootstrap/bootstrap";
+//@import "lightgallery";
+
+/* Helpers Styles */
+@import "helpers/_utils";
+@import "helpers/_typography";
+@import "helpers/_fonts";
+@import "helpers/_lightSlider";
+@import "helpers/_modals";
+@import "helpers/_breadcumbs";
+@import "helpers/_header";
+@import "helpers/_loaders";
+
+// Views
+//@import '../catalogue/form-tlv';
+@import 'header';
+@import 'cyberwow_bar';
+@import 'cyberentel_bar';
+@import 'footer';
+@import 'others';
+@import 'loading';
+@import 'product_source';
+@import 'why_entel';
+@import 'legals';
+@import '_compare_plans';
+//@import 'modal_telev';
+@import 'related_product';
+@import 'buy_fixed';
+@import 'lightbox_mobile';

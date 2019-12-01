@@ -1,0 +1,155 @@
+
+.g-popup {
+  z-index: 0 !important;
+
+  &.active {
+    z-index: 100 !important;
+  }
+}
+
+.ajax-content-loader {
+  display: none !important;
+}
+
+.entel-header {
+  box-shadow: none !important;
+
+  &__content__menu__televenta {
+    overflow: hidden !important;
+    
+    &--active {
+      overflow: initial !important;
+    }
+  }
+}
+
+#pixeltracker {
+  display: none;
+}
+
+.entel-body .entel-carateristicas {
+  padding: 0 0 35px;
+  background-color: $white;
+
+  @media (min-width: $laptop-s) {
+    padding: 15px 0 30px 0;
+  }
+
+  h2 {
+    color: $blue;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0 auto 40px;
+    padding: 30px 0 0;
+    line-height: 30px;
+    
+    @media (min-width: $tablet-m) {
+      width: 92%;
+      border-top: 1px solid #f5f5f5;
+      max-width: 1180px;
+    }
+
+    @media (min-width: $laptop-s) {
+      padding: 40px 0 0;
+      font-size: 35px;
+      margin-bottom: 60px;
+    }
+
+    span {
+      display: block;
+      color: $blue;
+
+      @media (min-width: $laptop-s) {
+        display: inline;
+      }
+    }
+  }
+
+  div {
+    ul {
+      margin: 0 0 30px 0;
+
+      @media (min-width: $tablet-s) {
+        width: 600px;
+        margin: 0 auto 30px;
+      }
+
+      @media (min-width: $laptop-s) {
+        width: 1000px;
+        margin: 0 auto 10px;
+      }
+
+      li {
+        display: inline-block;
+        padding: 0;
+
+        .titulo {
+          font-weight: 500;
+        }
+
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .entel-link {
+      text-decoration: none;
+      margin: 20px 0 0 0;
+  }
+}
+
+#mostrar-especificaciones-no-accesorios {
+    display: none;
+}
+
+/*Características*/
+.slick-dots{width:100%;list-style:none;text-align:center}
+.slick-dots li{position:relative;display:inline-block;margin:0 5px;padding:0;cursor:pointer}
+.slick-dots li button{ font-size:0; display:block;width:10px;border-radius:20px;height:10px;padding:5px;cursor:pointer;border:0;background:#cfcfd6}
+.slick-dots li.slick-active button{background:#fe6604}
+.slick-dots li button:focus,.slick-dots li button:hover{outline:0}
+.slick-dots li button:focus:before,.slick-dots li button:hover:before{opacity:1}
+.slick-dots li button:before{font-family:slick;font-size:6px;line-height:20px;position:absolute;top:0;left:0;width:20px;height:20px;content:'';text-align:center;opacity:.25;color:#000;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+.carac_prin h4,
+.carac_prin table{display:none;}
+.carac_prin .cotenCaracteristicas .title{ font-size:24px; line-height:30px; margin-bottom:20px; }
+.carac_prin .cotenCaracteristicas .sub{ font-size:14px; line-height:18px; font-weight:700; text-transform:uppercase; margin: 15px 0; }
+.carac_prin .cotenCaracteristicas .val{ font-size:15px; line-height:15px; font-weight:300; }
+.carac_prin .cotenCaracteristicas .val span{ font-size:15px; line-height:15px; display:inline-block; }
+.carac_prin .cotenCaracteristicas .val span:after{ content:"/"; display:inline-block; margin:0 3px; }
+.carac_prin .cotenCaracteristicas .val span:last-child:after{display:none;}
+.carac_prin .cotenCaracteristicas .left{ display:inline-block; width:49%; vertical-align:top; }
+.carac_prin .cotenCaracteristicas .right{ display:inline-block; width:49%; vertical-align:top; }
+.carac_prin .cotenCaracteristicas .e-row{ padding:30px 0; border-bottom:1px solid #85add1; }
+.carac_prin .cotenCaracteristicas .e-row.a .right {width:100%;}
+.carac_prin .cotenCaracteristicas .e-row.a .left {width:100%;}
+.carac_prin .cotenCaracteristicas .e-row.a .title.co{margin:30px 0;}
+.carac_prin .cotenCaracteristicas .e-row.a .iRight{ width: 280px; margin: 0 auto; position:relative; }
+.carac_prin .cotenCaracteristicas .e-row.a .iRight .img{ background:url(../arquivos/pd-bg.png) no-repeat; width:292px; height:195px; background-size: 90% auto;}
+.carac_prin .cotenCaracteristicas .e-row.a .iRight .valAncho{ position:absolute; bottom:-5px; right:65px; }
+.carac_prin .cotenCaracteristicas .e-row.a .iRight .valLargo{ position:absolute; top:125px; left:113px; }
+.carac_prin .cotenCaracteristicas .e-row.a .iRight .valAlto{ position:absolute; bottom:-5px; left:12px; }
+.carac_prin .cotenCaracteristicas .e-row.b .sub{ margin:0 0 5px 0; }
+.carac_prin .cotenCaracteristicas .e-row.b .val{ margin:0 0 20px 0; }
+.carac_prin .cotenCaracteristicas .e-row.b .right .fl{ margin-bottom:20px; }
+.carac_prin .cotenCaracteristicas .e-row.b .right .fl:last-child{ margin:0; }
+.carac_prin .cotenCaracteristicas .e-row.c .val{ margin:0 0 20px 0; }
+.carac_prin .cotenCaracteristicas .e-row.c .val:last-child{ margin:0; }
+.carac_prin .cotenCaracteristicas .e-row.d .val{ margin:0 0 20px 0; }
+.carac_prin .cotenCaracteristicas .e-row.d .val:last-child{ margin:0; }
+.carac_prin .cotenCaracteristicas .e-row.d .right .title.se{ margin:40px 0 30px 0; }
+
+@media (min-width: 768px) {
+	.carac_prin .cotenCaracteristicas .e-row{ text-align: left; max-width: 1000px; margin: 10px auto; }
+	.carac_prin .cotenCaracteristicas .e-row.a .right {width:49%;}
+	.carac_prin .cotenCaracteristicas .e-row.a .left {width:49%;}
+	.carac_prin .cotenCaracteristicas .e-row.a .iLeft{ display:inline-block; width:30%; vertical-align:top; }
+	.carac_prin .cotenCaracteristicas .e-row.a .iRight{ display:inline-block; width:69%; vertical-align:top; position:relative; }
+	.carac_prin .cotenCaracteristicas .e-row.a .iRight .img{ background:url(../arquivos/pd-bg.png) no-repeat; width:292px; height:195px; }
+	.carac_prin .cotenCaracteristicas .e-row.a .iRight .valAncho{ bottom:-20px; right:-35px; }
+	.carac_prin .cotenCaracteristicas .e-row.a .iRight .valLargo{ top:125px; left:113px; }
+	.carac_prin .cotenCaracteristicas .e-row.a .iRight .valAlto{ bottom:-20px; left:12px; }
+}

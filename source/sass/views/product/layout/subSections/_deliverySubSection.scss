@@ -1,0 +1,42 @@
+.deliverySubSection{
+	.recuadro{
+		@extend .DINNextLTProLight;
+		@extend .textCenter;
+		border: 2px solid $e-text-disabled;
+		border-style: dotted;
+		padding: 0.5rem;
+		img{
+			display: inline-block;
+			margin-right: 0.5rem;
+			width: 4rem;
+		}
+
+		.conten{
+			@extend .blueText;
+			@extend .textLeft;
+			line-height: 0.2;
+			display: inline-block;
+			h2{
+				font-size: ( 20 / $base-font )+ rem;
+				span{
+					@extend .DINNextLTProBold;
+				}
+			}
+			p{
+				font-size: ( 12 / $base-font )+ rem;
+				@extend .blueLightText;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.conten{
+		h2{
+			font-size: ( 16 / $base-font )+ rem !important;
+		}
+		p{
+			font-size: ( 9.6 / $base-font )+ rem !important;
+		}
+	}
+}

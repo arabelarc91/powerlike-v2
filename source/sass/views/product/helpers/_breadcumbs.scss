@@ -1,0 +1,23 @@
+.breadCrumb{
+	.bread-crumb{
+		ul{
+			li{
+				@extend .blueText;
+				a{@extend .blueText;}
+				font-size: (14 / $base-font) + rem;
+				vertical-align: text-bottom;
+				@extend .DINNextLTProLight;
+				display: inline;
+				cursor: pointer;
+				&::after{
+					content: " / ";
+				}
+				&:last-child{
+					&::after{
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}

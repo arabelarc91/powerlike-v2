@@ -1,0 +1,42 @@
+//- Layout
+extends layout/base.pug
+
+block globalvars
+    -page = 'product'
+
+//- Content Landing
+block content
+    .entel-page
+        .entel-section
+            .entel-container
+                br
+                br
+                br 
+                br
+                h2 Lista de páginas
+
+                .list-pages
+                    h3 Catálogo
+
+                    ul
+                        li 
+                            a.entel-link(href='/views/filter/personas.html') Personas 
+                            br
+                            br
+                            a.entel-link(href='/views/filter/empresas.html') Empresas
+
+
+                    h3 Producto
+
+                    ul
+                        li #[a.entel-link(href='/views/product/personas.html') Personas]
+                        li #[p.super-small También se usa para empresas]
+
+    style.
+        .list-pages { text-align: left; }
+        .list-pages h3 { margin: 25px 0; color: #004FB9; }
+        .list-pages ul { border-bottom: 1px solid #D1E2F2; padding: 0 0 25px 0; }
+        .list-pages ul:last-child { border-bottom: 0; }
+        .list-pages li { margin: 0 0 15px 0; }
+        .list-pages .entel-link { text-transform: none; }
+  
