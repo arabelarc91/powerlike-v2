@@ -8,3 +8,9 @@ mixin entel-options(profile,alt,img_path,src_img,extension,content)
         
         .content_info
             p !{content}
+
+
+mixin range-slider(ide, classie, min, max, valu, texte)
+    input(id= ide class=classie type="range", min= min, max=max, value=valu)
+    span !{texte}
+    //-+range-slider("range-frecuence", "range-frecuence", "1" , "100", "50")
