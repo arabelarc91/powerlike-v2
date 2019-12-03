@@ -1,5 +1,5 @@
 /*! Home */
-.entel-body {
+.entel-powerlike {
     .entel-catalogue {
 
         &__main {
@@ -1167,7 +1167,7 @@
         }
 
 
-        .entel-body{ 
+        .entel-powerlike{ 
             .entel-header-form {
                 display: none;
             }
@@ -1280,20 +1280,20 @@
     }
 }
 
-.entel-body--celulares .entel-header.entel-header-vtex {
+.entel-powerlike--celulares .entel-header.entel-header-vtex {
     height: 0 !important;
 }
   
-.entel-body--celulares .entel-header.entel-header-vtex .entel-header__content__logo {
+.entel-powerlike--celulares .entel-header.entel-header-vtex .entel-header__content__logo {
   opacity: 0 !important;
   display: none !important;
 }
   
-.entel-body--celulares .entel-header.entel-header-vtex .entel-header__content__menu {
+.entel-powerlike--celulares .entel-header.entel-header-vtex .entel-header__content__menu {
   height: 0 !important;  
 }
 
-.entel-body--empresas {
+.entel-powerlike--empresas {
     .filter-modality.renovacion-btn,
     .entel-header__content__menu__televenta {
         height: 0;
