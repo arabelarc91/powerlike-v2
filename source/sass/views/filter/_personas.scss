@@ -2,6 +2,29 @@
     background: $gray-bg;
 }
 
+.box-info {
+    background: $white;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    line-height: 20px;
+    color: $gray-placeholder;
+    border: 1px solid rgba(158, 159, 161, 0.5);
+}
+
+.bg-select-symbol {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    border-radius: 50%;
+    float: right;
+    padding: 0;
+    position: relative;
+    border: none;
+    text-align: center;
+    background-color: $sky-color;
+}
+
 .h2 {
     text-align: center;
     font-family: $barlow;
@@ -58,5 +81,55 @@
         background: $orange;
         font-weight: bold;
         text-transform: uppercase;
+    }
+}
+
+
+.powerlike_saver__select,
+.powerlike_chooseprofile__select {
+    width: 244px;
+    margin: 0 auto;
+
+    p {
+        @extend .p-blue;
+        font-size: 12px;
+        text-align: left !important;
+        margin: 0 0 14px 0;
+    }
+
+    div {
+        @extend .box-info;
+
+        .select-icon {
+            @extend .bg-select-symbol;
+
+            span {
+                width: 4px;
+                height: 9px;
+                border-radius: 10px;
+                display: inline-block;
+                transform: rotate(-45deg);
+                background-color: $color-light-blue;
+                transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+            }
+
+            span:nth-child(2) {
+                transform: rotate(45deg);
+            }
+
+            &.active {
+                span {
+                    transform: rotate(-138deg);
+                }
+
+                span:nth-child(2) {
+                    transform: rotate(138deg);
+                }                        
+            }
+        }
+    }
+
+    div ul {
+        display: none;
     }
 }

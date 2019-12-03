@@ -9,19 +9,14 @@
     }
 
     h2 {
-        color: #004FB9;
-        font-weight: bold;
-        font-size: 27px;
-        line-height: 108%;
-        text-align: center;
+        @extend .h2;
     }
 
     p {
-        font-weight: normal;
+        @extend .p-pink;
         font-size: 14px;
         line-height: 108%;
         text-align: center;
-        color: #FD6C98;
     }
 }
 

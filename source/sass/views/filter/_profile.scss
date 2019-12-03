@@ -91,68 +91,78 @@
                 cursor: pointer;
             }
         }
+    }
 
-        &__select {
+
+    &_saver {
+        height: 100vh;
+        padding: 70px 0;
+                
+        h2 {
+            @extend .h2;
+        }
+    
+        p {
+            @extend .p-pink;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        &__counter {
             width: 244px;
-            margin: 0 auto;
-
-            p {
-                @extend .p-blue;
-                font-size: 12px;
-                text-align: left;
-                margin: 0 0 14px 0;
-            }
+            margin: 0 auto; 
 
             div {
-                background: $white;
-                padding: 20px 20px;
-                box-sizing: border-box;
-                border-radius: 8px;
-                line-height: 20px;
-                color: $gray-placeholder;
-                border: 1px solid rgba(158, 159, 161, 0.5);
+                @extend .box-info;
+                text-align: center;
 
-                .select-icon {
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    border-radius: 50%;
-                    float: right;
-                    padding: 0;
-                    position: relative;
-                    border: none;
-                    text-align: center;
-                    background-color: $sky-color;
-
-                    span {
-                        width: 4px;
-                        height: 9px;
-                        border-radius: 10px;
-                        display: inline-block;
-                        transform: rotate(-45deg);
-                        background-color: $color-light-blue;
-                        transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-                    }
-
-                    span:nth-child(2) {
-                        transform: rotate(45deg);
+                .counter {
+                    @extend .bg-select-symbol;
+                    float: unset;
+                    box-shadow: 0 3px 1px 0px #93d6e6;
+                    font-size: 24px;
+                    font-weight: 500;
+                    color: $color-light-blue;
+                    line-height: 24px;  
+                    cursor: pointer;
+                    transform: translateY(0px);
+                    transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+                    
+                    &:visited, &:focus{
+                        outline:none;
                     }
 
                     &.active {
-                        span {
-                            transform: rotate(-138deg);
-                        }
-
-                        span:nth-child(2) {
-                            transform: rotate(138deg);
-                        }                        
+                        transform: translateY(1px);
+                        box-shadow: none;
                     }
+                }
+
+                .counter,
+                input[type="tel"] {
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-align: center;
+                    @include nodraggable;
+                }
+
+                input[type="tel"] {
+                    font-family: $barlow;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 24px;
+                    color: $gray-placeholder;
                 }
             }
 
-            div ul {
-                display: none;
-            }
+            p {
+                @extend .p-blue;
+                width : 100%;
+                font-size: 12px;
+                text-align: left;
+                line-height:normal;
+            }        
         }
     }
 }
