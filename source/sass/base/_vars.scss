@@ -16,14 +16,14 @@ $basedir: #{$baseurl}#{$uploads};
 $basedirfont: #{$baseurl}#{$fonts};
 
 //== Font Family
-$barlow : 'Barlow', sans-serif;
-$font-family: $barlow;;
+$barlow: 'Barlow', sans-serif;
+$font-family: $barlow;
 
 $font-default: 14px;
 $font-h2: 25px;
 
 // Colors
-$black: #000;
+   $black: #000;
 
 // Blues and Skyblues
    $blue: #0154a0;
@@ -56,7 +56,10 @@ $black: #000;
 
 // Grays
    $gray-line: #f0f0f0;
+   $gray-bg: #E5E5E5;
 
+// Pink 
+    $pink: #F46C8F;
 
 // Breakpoints
    $xxs-viewport: 325px;
