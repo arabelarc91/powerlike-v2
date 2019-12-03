@@ -42,11 +42,9 @@
         padding: 21px 17px;
 
         p {
+            @extend .p-blue;
             text-align: center;
             color: $color-blue;
-            font-family: $barlow;
-            font-style: normal;
-            font-weight: normal;
             font-size: 14px;
             line-height: 17px;
         }

@@ -1,3 +1,62 @@
 .entel-powerlike {
     background: $gray-bg;
 }
+
+.h2 {
+    text-align: center;
+    font-family: $barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 27px;
+    color: $color-blue;    
+}
+
+.h4 {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px; 
+}
+
+.p-pink {
+    font-family: $barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: $pink;
+}
+
+.p-blue {
+    font-family: $barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 10px;
+    width: 142px;
+    height: 25px;
+    color: $color-blue;
+}
+
+.button_entel__carousel {
+    position: absolute;
+    bottom: 21px;
+    left: 50%;
+    margin: 0 auto;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    
+    a {
+        width: 215px;
+        height: 42px;
+        color: $white;
+        display: block;
+        margin: 0 auto;
+        line-height: 42px;
+        border-radius: 50px;
+        background: $orange;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

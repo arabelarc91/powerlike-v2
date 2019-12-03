@@ -11,49 +11,16 @@
         
 
         h4 {
-            font-family: Barlow;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 14px; 
+            @extend .h4;
         }
 
         p {
-            font-family: $barlow;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 20px;
-            color: $pink;
+            @extend .p-pink;
         }
 
         &__carousel {
             width: 80%;
             margin: 0 auto;
-
-            
-        }
-
-        .button_entel__carousel {
-            position: absolute;
-            bottom: 21px;
-            left: 50%;
-            margin: 0 auto;
-            position: absolute;
-            text-align: center;
-            transform: translate(-50%, -50%);
-            
-            a {
-                width: 215px;
-                height: 42px;
-                color: $white;
-                display: block;
-                margin: 0 auto;
-                line-height: 42px;
-                border-radius: 50px;
-                background: $orange;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
         }
     }
 
@@ -63,35 +30,127 @@
         padding: 70px 0;
                 
         h2 {
-            text-align: center;
-            font-family: $barlow;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 27px;
-            line-height: 27px;
-            color: $color-blue;
+            @extend .h2;
         }
     
         p {
+            @extend .p-pink;
             text-align: center;
-            font-family: $barlow;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 14px;
             line-height: 40px;
-            color: $pink;
         }
 
-        &__slidecontainer__item{
-            padding: 0 33px; 
-            text-align: center;
-            margin: 0 0 21px 0;
+        &__slidecontainer__item {
+            width: 270px;
+            padding: 0;
+            text-align: left;
+            margin: 0 auto 21px auto;
 
             img,
-            input,
+            .range,
             span {
                 vertical-align: middle;
                 display: inline-block;
+            }
+
+            .range p {
+                @extend .p-blue;
+                text-align: center;
+            }
+
+            .range label {
+                font-weight: 600;   
+            }
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                height: 6px;
+                width: 134px;
+                margin: 0 7px;
+                background: #DDDDDD;
+                outline: none;                
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                border-radius: 3px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                border-radius: 9px;
+                width: 17px;
+                height: 17px;
+                background: $pink;
+                cursor: pointer;
+            }
+                
+            input[type="range"]::-moz-range-thumb {
+                border-radius: 9px;
+                width: 17px;
+                height: 17px;
+                background: $pink;
+                cursor: pointer;
+            }
+        }
+
+        &__select {
+            width: 244px;
+            margin: 0 auto;
+
+            p {
+                @extend .p-blue;
+                font-size: 12px;
+                text-align: left;
+                margin: 0 0 14px 0;
+            }
+
+            div {
+                background: $white;
+                padding: 20px 20px;
+                box-sizing: border-box;
+                border-radius: 8px;
+                line-height: 20px;
+                border: 1px solid rgba(158, 159, 161, 0.5);
+
+                .select-icon {
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    border-radius: 50%;
+                    float: right;
+                    padding: 0;
+                    position: relative;
+                    border: none;
+                    text-align: center;
+                    background-color: $sky-color;
+
+                    span {
+                        width: 4px;
+                        height: 9px;
+                        border-radius: 10px;
+                        display: inline-block;
+                        transform: rotate(-45deg);
+                        background-color: $color-light-blue;
+                        transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+                    }
+
+                    span:nth-child(2) {
+                        transform: rotate(45deg);
+                    }
+
+                    &.active {
+                        span {
+                            transform: rotate(-138deg);
+                        }
+
+                        span:nth-child(2) {
+                            transform: rotate(138deg);
+                        }                        
+                    }
+                }
+            }
+
+            div ul {
+                display: none;
             }
         }
     }
