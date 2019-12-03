@@ -51,6 +51,8 @@
                 line-height: 42px;
                 border-radius: 50px;
                 background: $orange;
+                font-weight: bold;
+                text-transform: uppercase;
             }
         }
     }
@@ -110,6 +112,10 @@
         }
     }
 }     
+
+.slick-dots li button {
+    padding: 0;
+}
 
 .slick-dots li button:before {
     position: absolute;
