@@ -1,0 +1,10 @@
+mixin entel-options(profile,alt,img_path,src_img,extension,content)
+    .slider_options__profile
+        .tag 
+            span !{profile}
+
+        .icon
+            img(src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        
+        .content_info
+            p !{content}
