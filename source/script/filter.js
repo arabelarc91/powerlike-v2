@@ -22,7 +22,9 @@ $(function() {
                     infinite: false,
                     mobileFirst: true,
                     pauseOnFocus: false,
-                    pauseOnHover: false
+                    pauseOnHover: false,
+                    centerMode: true,
+                    centerPadding: '20px',
                 })
             }
         }
