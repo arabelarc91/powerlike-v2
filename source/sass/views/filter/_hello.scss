@@ -1,20 +1,22 @@
-.entel-powerlike__hello {
-    &__content {
-        width: 233px;
-        margin: 85px auto 0;
+.powerlike__hello {
+    height: 100vh;
+    padding: 70px 0;
 
+    &__content {
         &__img {
-            width: 94px;
             margin: 0 auto;
+            max-width: 120px;
+            position: relative;
+
+            img:nth-child(2) {
+                position: absolute;
+                right: 20px;
+                top: 0;
+            }
         }
        
         h2 {
-            font-weight: bold;
-            font-size: 27px;
-            line-height: 108%;
-            text-align: center;
-            color: #004FB9;
-            margin-top: 23px;
+            @extend .h2;
         }
     }
 

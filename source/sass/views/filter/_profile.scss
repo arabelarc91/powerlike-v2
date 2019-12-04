@@ -131,10 +131,6 @@
                     &:visited, &:focus{
                         outline:none;
                     }
-
-                    &.active {
-                        transform: translateY(1px);
-                    }
                 }
 
                 .counter,
