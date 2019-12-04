@@ -8,6 +8,9 @@
 // Theme reset
 @import '../../theme/index';
 
+// Theme reset
+@import '../../mixin/mixing';
+
 // Preselector
 @import '../preselector/preselector';
 
@@ -23,8 +26,8 @@
 // @import 'products';
 @import 'personas';
 @import 'hello';
+@import 'options';
 @import 'splash';
-@import 'profile-market';
-@import 'preselector';
-@import 'loading';
+@import 'profile';
 @import 'footer';
+@import 'slider-custom';

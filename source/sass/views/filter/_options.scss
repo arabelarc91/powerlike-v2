@@ -1,0 +1,32 @@
+.entel-powerlike__options {
+    &__img {
+        width: 63px;
+        margin: 60px auto 28px;
+
+        img {
+            animation: swing linear 1s infinite alternate; 
+        }
+    }
+
+    h2 {
+        @extend .h2;
+    }
+
+    p {
+        @extend .p-pink;
+        font-size: 14px;
+        line-height: 108%;
+        text-align: center;
+    }
+}
+
+@-webkit-keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+  

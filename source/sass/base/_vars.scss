@@ -26,75 +26,77 @@ $font-h2: 25px;
    $black: #000;
 
 // Blues and Skyblues
-   $blue: #0154a0;
-   $color-blue: #004FB9;
-   $blue-light: #B2CBE2;
-   $blue-light: #6798c6;
-   $color-light-blue: #00B9EB;
-   $color-gray-blue: #B1EAF8;
-   $blue-light-dark: darkblue;
-   $gray-filters-buttons: rgba(179, 179, 179, 0.2);
+    $blue: #0154a0;
+    $color-blue: #004FB9;
+    $blue-light: #B2CBE2;
+    $blue-light: #6798c6;
+    $line-carousel: #7EB1F6;
+    $color-light-blue: #00B9EB;
+    $color-gray-blue: #B1EAF8;
+    $sky-color: #d9f5fc;
+    $blue-light-dark: darkblue;
+    $gray-filters-buttons: rgba(179, 179, 179, 0.2);
 
 // Green
-   $blue-aqua: #68d9d0;
+    $blue-aqua: #68d9d0;
 
 //Whites and grays
-   $white: #fff;
-   $gray: #e1e4eb;
-   $gray-header: #f9fafc;
-   $gray-line: #DDDDDD;
+    $white: #fff;
+    $gray: #e1e4eb;
+    $gray-header: #f9fafc;
+    $gray-line: #DDDDDD;
 
 // Orange
-   $orange: #ff6702;
-   $orange-tlv: #f86606;
-   $orange-light: #ff7b00;
+    $orange: #ff6702;
+    $orange-tlv: #f86606;
+    $orange-light: #ff7b00;
 
 // Red
-   $red: red;
-   $error: #e40000;
-   $color-red: #C72127;
+    $red: red;
+    $error: #e40000;
+    $color-red: #C72127;
 
 // Grays
-   $gray-line: #f0f0f0;
-   $gray-bg: #E5E5E5;
-
+    $gray-line: #f0f0f0;
+    $gray-bg: #E5E5E5;
+    $gray-placeholder: #9E9FA1;
 // Pink 
     $pink: #F46C8F;
 
 // Breakpoints
-   $xxs-viewport: 325px;
-   $xs-viewport: 460px;
-   $sm-viewport: 768px;
-   $md-viewport: 992px;
-   $lg-viewport: 1200px;
+    $xxs-viewport: 325px;
+    $xs-viewport: 460px;
+    $sm-viewport: 768px;
+    $md-viewport: 992px;
+    $lg-viewport: 1200px;
 
 // Container
-   $sm-container: 750px;
-   $md-container: 970px;
-   $lg-container: 1270px;
+    $sm-container: 750px;
+    $md-container: 970px;
+    $lg-container: 1270px;
 
 
 
 // Breakpoints
-$xs-viewport: 460px; //mobile
-$sm-viewport: 768px; //tablet
-$md-viewport: 992px; //laptop-s
-$lg-viewport: 993px; //laptop-m
-$xlg-viewport: 1280px; //laptop-m
+    $xs-viewport: 460px; //mobile
+    $sm-viewport: 768px; //tablet
+    $md-viewport: 992px; //laptop-s
+    $lg-viewport: 993px; //laptop-m
+    $xlg-viewport: 1280px; //laptop-m
 
 
 // Breakpoints
-$mobile-s: 320px;
-$mobile-m: 375px;
-$mobile-l: 425px;
-$tablet-s: 640px;
-$tablet-m: 768px;
-$notebook-s: 992px;
-$laptop-s: 1024px;
-$laptop-m: 1280px;
-$desktop-s: 1440px;
-$desktop-m: 1750px;
-$mb-viewport: 460px;
-$sm-viewport: 768px;
-$md-viewport: 992px;
-$lg-viewport: 1200px;
+    $mobile-s: 320px;
+    $mobile-m: 375px;
+    $mobile-l: 425px;
+    $tablet-s: 640px;
+    $tablet-m: 768px;
+    $notebook-s: 992px;
+    $laptop-s: 1024px;
+    $laptop-m: 1280px;
+    $desktop-s: 1440px;
+    $desktop-m: 1750px;
+    $mb-viewport: 460px;
+    $sm-viewport: 768px;
+    $md-viewport: 992px;
+    $lg-viewport: 1200px;

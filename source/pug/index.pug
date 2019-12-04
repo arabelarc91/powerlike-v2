@@ -6,31 +6,24 @@ block globalvars
 
 //- Content Landing
 block content
-    .entel-page
+    .entel-page(style="max-width: 320px; margin: 0 auto; padding: 50px 0; height: 100vh")
         .entel-section
             .entel-container
                 br
                 br
                 br 
                 br
-                h2 Lista de páginas
+                h1 Lista de páginas
 
                 .list-pages
-                    h3 Catálogo
+                    h3 Power Like
 
                     ul
                         li 
-                            a.entel-link(href='/views/filter/personas.html') Personas 
+                            a.entel-link(href='/views/filter/personas.html' style="text-decoration: underline") #[strong - Personas] 
                             br
                             br
-                            a.entel-link(href='/views/filter/empresas.html') Empresas
-
-
-                    h3 Producto
-
-                    ul
-                        li #[a.entel-link(href='/views/product/personas.html') Personas]
-                        li #[p.super-small También se usa para empresas]
+                            a.entel-link(href='/views/filter/empresas.html' style="text-decoration: underline") #[strong - Empresas]
 
     style.
         .list-pages { text-align: left; }

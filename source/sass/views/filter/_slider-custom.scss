@@ -1,0 +1,78 @@
+.slider_options__profile {
+    margin-top: 22px;
+    margin-left: 7px;
+    margin-right: 7px;
+    background: $white;
+    border: 2px solid $line-carousel;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+
+    &.slick-current {
+        border: 2px solid $pink;
+    }
+    
+    .tag {
+        width: 140px;
+        height: 25px;
+        border-radius: 50px;
+        margin: -14px auto;
+        background-color: $pink;
+        
+        span {
+            color: $white;
+            font-size: 12px;
+            line-height: 25px;
+            font-style: normal;
+            font-weight: bold;
+            font-family: $barlow;
+            text-transform: uppercase;
+        }   
+    }
+
+    .icon {
+        margin: 31px 0 0 0;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+    
+    .content_info {
+        padding: 21px 17px;
+
+        p {
+            @extend .p-blue;
+            text-align: center;
+            color: $color-blue;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}     
+
+.slick-dots li button {
+    padding: 0;
+}
+
+.slick-dots li button:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #c4c4c4;
+    border-radius: 100%;
+    text-align: center;
+    transition: width .3s ease 0s,height .3s ease 0s,background-color .3s ease 0s;
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:focus:before, .slick-dots li button:hover:before {
+    width: 12px;
+    height: 12px;
+    background-color: #ff560a;
+}

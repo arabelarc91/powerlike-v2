@@ -1,20 +1,30 @@
 $(function() {
     'use strict'
-    $('label.entel_options span').each(function() {
-        var textBtn = $(this).text().replace(/[^A-Z0-9]/ig, " ").toUpperCase()
-        $(this).text(textBtn)
-    })
-
-
+    
     var selectProfile = (function() {
         var inputInitial = {
-            slider_options: ".powerlike_options__carousel"
+            slider_options: ".powerlike_options__carousel",
+            select_icon :".select-icon",
+            counter_button: ".counter"
         }
 
         var suscribeEvents = function() {
+            var selectIcon = $(inputInitial.select_icon)
+            selectIcon.on("click", events.list_brands)
+
+            // var buttonCounter = $(inputInitial.counter_button)
+            // buttonCounter.on("click", events.counter_button)
         }
         
         var events = {
+            counter_button: function () {
+                $(this).toggleClass("active")
+            },
+
+            list_brands: function () {
+                $(this).toggleClass("active")
+            },
+
             slider_options: function(e) {
                 $(inputInitial.slider_options).slick({
                     arrows: false,
@@ -22,7 +32,9 @@ $(function() {
                     infinite: false,
                     mobileFirst: true,
                     pauseOnFocus: false,
-                    pauseOnHover: false
+                    pauseOnHover: false,
+                    centerMode: true,
+                    centerPadding: '20px'
                 })
             }
         }

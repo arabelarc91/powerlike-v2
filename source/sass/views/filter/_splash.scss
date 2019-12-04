@@ -1,27 +1,21 @@
-.powerlike_splash_idealdevice {
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    margin: 0 auto;
-    position: absolute;
-    text-align: center;
-    transform: translate(-50%, -50%);
-
-    h2 {
-        font-family: $barlow;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 27px;
-        line-height: 27px;
-        color: $color-blue;
-    }
-
-    p {
-        font-family: $barlow;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 40px;
-        color: $pink;
+.powerlike {
+    &_splash_idealdevice,
+    &_splash_profile,
+    &__hello__content {
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        margin: 0 auto;
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50%);
+    
+        h2 {
+            @extend .h2;
+        }
+    
+        p {
+            @extend .p-pink;
+        }
     }
 }
