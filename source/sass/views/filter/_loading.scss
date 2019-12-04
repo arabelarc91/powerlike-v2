@@ -1,0 +1,25 @@
+.entel-powerlike__splash-loading {
+    text-align: center;
+    padding-top: 118px;
+    height: 100vh;
+
+    &__text {
+        margin: 43px auto 0; 
+        width: 206px;
+
+        h2 {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 22px;
+            color: #FD6C98;
+            margin-bottom: 9px;
+        }
+    
+        p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #004FB9;
+        }
+    }
+}
