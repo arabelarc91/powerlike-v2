@@ -12,8 +12,8 @@ $(function() {
             var selectIcon = $(inputInitial.select_icon)
             selectIcon.on("click", events.list_brands)
 
-            var buttonCounter = $(inputInitial.counter_button)
-            buttonCounter.on("click", events.counter_button)
+            // var buttonCounter = $(inputInitial.counter_button)
+            // buttonCounter.on("click", events.counter_button)
         }
         
         var events = {
