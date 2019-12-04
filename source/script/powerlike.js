@@ -1,54 +1,31 @@
-$(function() {
-    'use strict'
-    
-    var selectProfile = (function() {
-        var inputInitial = {
-            slider_options: ".powerlike_options__carousel",
-            select_icon :".select-icon",
-            counter_button: ".counter"
-        }
+let saver = {
+    events : function() {
+        $('.select-icon').click(function () {
+            $(this).toggleClass("active")            
+        })
+    }
+}
 
-        var suscribeEvents = function() {
-            var selectIcon = $(inputInitial.select_icon)
-            selectIcon.on("click", events.list_brands)
+let sliders = {
+    profiles : function() {
+        $('.powerlike_options__carousel').slick({
+            arrows: false,
+            dots: true,
+            infinite: false,
+            mobileFirst: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            centerMode: true,
+            centerPadding: '20px'
+        })
+    }
+}
 
-            // var buttonCounter = $(inputInitial.counter_button)
-            // buttonCounter.on("click", events.counter_button)
-        }
-        
-        var events = {
-            counter_button: function () {
-                $(this).toggleClass("active")
-            },
+let initialize = function() {
+    saver.events()
+    sliders.profiles()
+}
 
-            list_brands: function () {
-                $(this).toggleClass("active")
-            },
-
-            slider_options: function(e) {
-                $(inputInitial.slider_options).slick({
-                    arrows: false,
-                    dots: true,
-                    infinite: false,
-                    mobileFirst: true,
-                    pauseOnFocus: false,
-                    pauseOnHover: false,
-                    centerMode: true,
-                    centerPadding: '20px'
-                })
-            }
-        }
-
-        var initialize = function() {
-            suscribeEvents()
-            events.slider_options()
-        }
-
-        return {
-            init: initialize
-        }
-    })()
-
-    selectProfile.init()
-    console.log("reaDY!")
+$(document).ready(function() {
+    initialize()
 })
