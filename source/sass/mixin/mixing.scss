@@ -38,13 +38,13 @@
     transform: scale(0.8);
   }
   5% {
-    transform: scale(0.9);
+    transform: scale(1.2);
   }
   10% {
     transform: scale(0.8);
   }
   15% {
-    transform: scale(1);
+    transform: scale(1.2);
   }
   50% {
     transform: scale(0.8);
@@ -55,7 +55,5 @@
 }
 
 .heart {
-  animation: animateHeart;
-  animation-duration: 1.2s;
-  animation-iteration-count: 10s;
+  animation: animateHeart 1.2s infinite;
 }
