@@ -1,18 +1,16 @@
-.entel-powerlike__hello {
+.powerlike_hello {
+    height: 100vh;
+    
     &__content {
         width: 233px;
-        margin: 85px auto 0;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 85px;
 
-        &__img {
-            width: 94px;
-            margin: 0 auto;
-        }
-       
         h2 {
             font-weight: bold;
             font-size: 27px;
             line-height: 108%;
-            text-align: center;
             color: #004FB9;
             margin-top: 23px;
         }

@@ -1,0 +1,5 @@
+mixin entel-profile-market(filter,img_path,img_vp,extension,alt_img,text)
+    a(href='javascript:void(0)' filter= filter).powerlike_profile_market__options__button
+        img.icon-vp(src=img_path + img_vp + extension, srcset= img_path + img_vp + '@2x' + extension + ' 2x,' + img_path + img_vp + extension + ' 1x', alt=alt_img)
+        span !{text}
+        img.icon-arrow(src= img_path + 'icon-arrow.png', srcset= img_path + 'icon-arrow@2x.png 2x,' + img_path + 'icon-arrow.png 1x', alt=alt_img)
