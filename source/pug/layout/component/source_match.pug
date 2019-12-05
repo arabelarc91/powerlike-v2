@@ -1,0 +1,27 @@
+mixin entel-match(brand,model,img,alt,battery,camera,screen,capacity,link,button)
+    .slider_options__match
+        h2 #[strong !{brand}] #[span !{model}]
+
+        img(src= img, alt=alt)
+
+        .feature 
+            .feature__battery
+                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                span !{battery}
+            
+            .feature__camera
+                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                span !{camera}
+            
+            .feature__screen
+                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                span !{screen}
+            
+            .feature__capacity
+                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                span !{capacity}
+
+        a(href=link) Ver más detalle
+
+        .button-ficha
+            a(href="#") LO quiero
