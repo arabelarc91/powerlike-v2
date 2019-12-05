@@ -28,12 +28,33 @@
     }
 
     &_devicedetail__content__detail {
+        width: 310px;
+        margin: 0 auto;
         text-align: center;
+        position: relative;
 
         .content_match {
+            width: calc(100%/4);
             display: inline-block;
-            margin: 0 7px;
             vertical-align: middle;
+        }
+
+        .link-detalle {
+            color: $orange;
+        }
+
+        .button_entel__match a,
+        .button-ficha a {
+            width: 215px;
+            height: 42px;
+            color: #fff;
+            display: block;
+            margin: 0 auto;
+            line-height: 42px;
+            border-radius: 50px;
+            background: #ff6702;
+            font-weight: bold;
+            text-transform: uppercase;
         }
     }    
 }
