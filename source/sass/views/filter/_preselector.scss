@@ -40,6 +40,7 @@
             transition: all 400ms ease 0s;
             position: relative;
             margin: 8px auto;
+            transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
 
             &:hover {
                 background-color: #004FB9;
