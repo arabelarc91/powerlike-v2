@@ -1,5 +1,4 @@
 section.powerlike_devicedetail
-    include header.pug
     .powerlike_devicedetail__content
         .powerlike_devicedetail__content__ideal
             h5 Tu equipo Ideal recomendado
@@ -14,5 +13,12 @@ section.powerlike_devicedetail
             +entel-match-detail('class','icon-battery', '.png', 'detail', '3 días')
             +entel-match-detail('class','icon-battery', '.png', 'detail', '3 días')
             +entel-match-detail('class','icon-battery', '.png', 'detail', '3 días')
-            +entel-match-detail('class','icon-battery', '.png', 'detail', '3 días')
+            +entel-match-detail('class','icon-battery', '.png', 'detail', '3 días') 
 
+            a.link-detalle(href="") ver detalle
+
+            .button_entel__match
+                a(href="#") continuar
+
+        .powerlike_devicedetail__content__match
+            +entel-match('Huawei','P30 Lite','front-huawei','huawei','1 día Duración','13 MP Cámara ','5,5´ Pantalla' ,'32GB Capacidad','ver detalle','lo quiero')

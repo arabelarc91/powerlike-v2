@@ -1,4 +1,4 @@
-mixin entel-match(brand,model,img,alt,battery,camera,screen,capacity,link,button)
+mixin entel-match(brand,model,img,alt,classie,src_img,extension,battery,camera,screen,capacity,link,button)
     .slider_options__match
         h2 #[strong !{brand}] #[span !{model}]
 
@@ -6,22 +6,22 @@ mixin entel-match(brand,model,img,alt,battery,camera,screen,capacity,link,button
 
         .feature 
             .feature__battery
-                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
                 span !{battery}
             
             .feature__camera
-                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
                 span !{camera}
             
             .feature__screen
-                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)            
                 span !{screen}
             
             .feature__capacity
-                img(src='', srcset= '@2x.png 2x, 1x', alt='Entel Perú')
+                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
                 span !{capacity}
 
-        a(href=link) Ver más detalle
+        a.link-ficha(href=link) Ver más detalle
 
         .button-ficha
-            a(href="#") LO quiero
+            a(href="#") Lo quiero

@@ -30,7 +30,7 @@ let sliders = {
     devices: function () {
         $(".powerlike_devicedetail__content__device").slick({
             arrows: false,
-            dots: true,
+            dots: false,
             infinite: false,
             mobileFirst: true,
             pauseOnFocus: false,
