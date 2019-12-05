@@ -4,20 +4,20 @@
 
 .box-info {
     background: $white;
-    padding: 20px 20px;
+    padding: 20px 15px;
     box-sizing: border-box;
     border-radius: 8px;
     line-height: 20px;
     color: $gray-placeholder;
+    margin-bottom: 30px;
     border: 1px solid rgba(158, 159, 161, 0.5);
 }
 
 .bg-select-symbol {
     width: 22px;
     height: 22px;
-    display: inline-block;
-    border-radius: 50%;
     float: right;
+    border-radius: 50%;
     padding: 0;
     position: relative;
     border: none;
@@ -33,13 +33,50 @@
     font-size: 27px;
     line-height: 27px;
     color: $color-blue;    
+
+    span {
+        font-size: 20px;
+        line-height: 20px;
+        display: block;
+        font-weight: 800;
+        color: $color-blue;    
+    }
+}
+
+.h3 {
+    font-family: $barlow;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+
+    strong {
+        font-weight: 800;
+        display: block;
+    }
+}
+
+.h5 {
+    font-family: $barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+
+    span {
+        display: block;
+        font-size: 16px;
+        line-height: 16px;        
+    }
 }
 
 .h4 {
-    font-family: Barlow;
+    font-family: $barlow;
     font-style: normal;
     font-weight: bold;
     font-size: 14px; 
+    line-height: 14px;
 }
 
 .p-pink {
@@ -132,4 +169,20 @@
     div ul {
         display: none;
     }
+}
+
+.powerlike_profile,
+.powerlike_hello ,
+.powerlike_options,
+.powerlike_chooseprofile,
+.powerlike_devicedetail,    
+.powerlike__preselector,
+.powerlike_saver {
+    height: 100vh;
+    padding: 70px 0;
+    position: relative;
+}
+
+.powerlike_devicedetail {
+    padding: 50px 0 0 0;
 }

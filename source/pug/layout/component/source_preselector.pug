@@ -1,5 +1,4 @@
 mixin entel-preselector(filter,img_nohover, alt_img,img_hover, modality)
-    a(href='javascript:void(0)' filter= filter).entel-powerlike__preselector__content__butons
-        img.no--hover(src=img_nohover alt=alt_img)
-        img.hover(src=img_hover alt=alt_img)
+    a(href='javascript:void(0)' filter= filter).powerlike__preselector__content__buttons
+        //-img.no--hover(src=img_nohover alt=alt_img)
         | !{modality}

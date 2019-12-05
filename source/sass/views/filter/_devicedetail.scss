@@ -1,0 +1,39 @@
+.powerlike {
+    &_devicedetail__content__ideal {
+        height: 73px;
+        padding: 21px 0;
+        background-color: $color-blue;
+
+        h5 {
+            @extend .h5;
+            color: $white;
+            font-weight: 400;
+            text-align: center;
+
+            span {
+                font-weight: 800;
+            }
+        }
+    }
+
+    &_devicedetail__content__device {
+        margin: 30px 0;
+
+        .img-slide {
+            img {
+                margin: 0 auto;
+            }
+        }
+
+    }
+
+    &_devicedetail__content__detail {
+        text-align: center;
+
+        .content_match {
+            display: inline-block;
+            margin: 0 7px;
+            vertical-align: middle;
+        }
+    }    
+}
