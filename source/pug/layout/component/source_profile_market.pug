@@ -1,4 +1,4 @@
-mixin entel-profile-market(filter,img_path,img_vp,extension,alt_img,text)
+mixin entel-profile-market(filter,img_path,src_img,img_vp,extension,alt_img,text)
     a(href='javascript:void(0)' filter= filter).powerlike_profile_market__content__options__button
         img.icon-vp(src=img_path + img_vp + extension, srcset= img_path + img_vp + '@2x' + extension + ' 2x,' + img_path + img_vp + extension + ' 1x', alt=alt_img)
         span !{text}
