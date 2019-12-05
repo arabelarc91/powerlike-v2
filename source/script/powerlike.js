@@ -1,5 +1,5 @@
 let saver = {
-    events : function() {
+    events : function () {
         $('.select-icon').click(function () {
             $(this).toggleClass("active")            
         })
@@ -7,8 +7,21 @@ let saver = {
 }
 
 let sliders = {
-    profiles : function() {
+    profiles : function () {
         $('.powerlike_options__carousel').slick({
+            arrows: false,
+            dots: true,
+            infinite: false,
+            mobileFirst: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            centerMode: true,
+            centerPadding: '20px'
+        })
+    },
+
+    devices : function () {
+        $(".powerlike_devicedetail__content__device").slick({
             arrows: false,
             dots: true,
             infinite: false,
@@ -24,6 +37,7 @@ let sliders = {
 let initialize = function() {
     saver.events()
     sliders.profiles()
+    sliders.devices()
 }
 
 $(document).ready(function() {

@@ -20,3 +20,32 @@ mixin range-slider(ide, classie, min, max, valu, name, question)
         label(for= name) !{name}
 
     //-+range-slider("range-frecuence", "range-frecuence", "1" , "100", "50", name, "¿?")
+
+
+
+mixin entel-match-slider(brand,model,img_path,src_img,extension,content, texte)
+    .slider_options__match
+        .text 
+            h2 !{brand}
+            p !{model}
+
+        .img
+            img(src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        
+    //- +entel-options("huawei", "p30 lite", "../../images/profile/","icon-gamer", ".png", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit, consectetur, voluptas quis deleniti provident illo nemo eaque nostrum assumenda tempore, suscipit nisi incidunt aspernatur molestias. Iure ipsa cum minus!")
+
+mixin entel-device(classie,src_img, extension, alt)
+    .slider_options__match
+        .img-slide
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+
+
+mixin entel-match-detail(classie,src_img, extension, alt, texte)
+    .content_match
+        .match__item_main
+            img(src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+            p !{texte}
+
+
+    //- +entel-options("huawei", "p30 lite", "../../images/profile/","icon-gamer", ".png", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit, consectetur, voluptas quis deleniti provident illo nemo eaque nostrum assumenda tempore, suscipit nisi incidunt aspernatur molestias. Iure ipsa cum minus!")
+

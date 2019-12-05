@@ -1,7 +1,5 @@
 .powerlike {
     &_options {
-        height: 100vh;
-        padding: 70px 0;
         text-align: center;
         background-image: url(../../../images/home/bg-vector-options.png);
         background-position-x: center;
@@ -27,82 +25,74 @@
         }
     }
 
-
     &_chooseprofile {
-        height: 100vh;
-        padding: 70px 0;
-
         &__content {
-            h2 {
-                @extend .h2;
-            }
-        
-            p {
-                @extend .p-pink;
+            h5 {
+                @extend .h5;
                 text-align: center;
-                line-height: 40px;
+                margin-bottom: 58px;
             }
-
-            &__slidecontainer__item {
-                width: 270px;
-                padding: 0;
-                text-align: center;
-                margin: 0 auto 21px auto;
-
-                img,
-                .range,
-                span {
-                    vertical-align: middle;
-                    display: inline-block;
-                }
-
-                .range p {
-                    @extend .p-blue;
-                    text-align: center;
-                }
-
-                .range label {
-                    font-weight: 600;   
-                }
-
-                input[type="range"] {
-                    -webkit-appearance: none;
-                    height: 6px;
-                    width: 134px;
-                    margin: 0 7px;
-                    background: #DDDDDD;
-                    outline: none;                
-                    -webkit-transition: .2s;
-                    transition: opacity .2s;
-                    border-radius: 3px;
-                }
-
-                input[type="range"]::-webkit-slider-thumb {
-                    -webkit-appearance: none;
-                    appearance: none;
-                    border-radius: 9px;
-                    width: 17px;
-                    height: 17px;
-                    background: $pink;
-                    cursor: pointer;
-                }
-                    
-                input[type="range"]::-moz-range-thumb {
-                    border-radius: 9px;
-                    width: 17px;
-                    height: 17px;
-                    background: $pink;
-                    cursor: pointer;
-                }
-            }
-        }
-                
+        }        
     }
 
+    &_chooseprofile {
+        &__slidecontainer__item {
+            width: 250px;
+            padding: 0;
+            text-align: left;
+            margin: 0 auto 21px auto;
+
+            img,
+            .range,
+            span {
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+            .range p {
+                @extend .p-blue;
+                text-align: left;
+            }
+
+            .range label {
+                font-weight: 600;
+                font-size: 12px;
+                color: $color-light-blue;
+            }
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                height: 6px;
+                width: 190px;
+                margin: 0 7px 0 0;
+                background: #DDDDDD;
+                outline: none;                
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+                border-radius: 3px;
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                border-radius: 9px;
+                width: 17px;
+                height: 17px;
+                background:$color-light-blue;
+                cursor: pointer;
+            }
+                
+            input[type="range"]::-moz-range-thumb {
+                border-radius: 9px;
+                width: 17px;
+                height: 17px;
+                background:$color-light-blue;
+                cursor: pointer;
+            }
+        }        
+    }
 
     &_saver {
-        height: 100vh;
-        padding: 70px 0;
 
         &__content {
             h2 {
@@ -118,11 +108,11 @@
             &__counter {
                 width: 244px;
                 margin: 0 auto; 
-
+    
                 div {
                     @extend .box-info;
                     text-align: center;
-
+    
                     .counter {
                         @extend .bg-select-symbol;
                         float: unset;
@@ -138,8 +128,13 @@
                         &:visited, &:focus{
                             outline:none;
                         }
-                    }
 
+                        &:active {
+                            line-height: 23px;
+                            box-shadow: none;
+                        }
+                    }
+    
                     .counter,
                     input[type="tel"] {
                         display: inline-block;
@@ -147,7 +142,7 @@
                         text-align: center;
                         @include nodraggable;
                     }
-
+    
                     input[type="tel"] {
                         font-family: $barlow;
                         font-style: normal;
@@ -157,7 +152,7 @@
                         color: $gray-placeholder;
                     }
                 }
-
+    
                 p {
                     @extend .p-blue;
                     width : 100%;
@@ -165,9 +160,49 @@
                     text-align: left;
                     line-height:normal;
                 }        
+            }               
+        }
+    }
+
+    &_profile {
+        &__content {
+            h3 {
+                @extend .h3;
             }
         }
-                
+    }
+
+    &__preselector__content {
+        h2 {
+            @extend .h2;
+            font-weight: normal;
+        }
+
+        &__buttons {
+            width: 249px;
+            height: 66px;
+            display: block;
+            font-family: $barlow;
+            font-weight: bold;
+            font-size: 12px;
+            background: $white;
+            line-height: 66px;
+            padding: 0 60px;
+            margin: 14px auto;
+            text-align: left;
+            text-transform: uppercase;
+            box-shadow: 0px 4px 4px rgba(125, 164, 201, 0.25);
+            border-radius: 6px;
+
+            img {
+                width: 30px;
+            }
+            
+            &:active {
+                box-shadow: none;
+                line-height: 68px;
+            }
+        }
     }
 }
 
