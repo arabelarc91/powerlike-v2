@@ -1,4 +1,8 @@
-.powerlike__hello {
+.powerlike_splash_match {
+    height: 100vh;
+    text-align: center;
+    color: #004FB9;
+
     &__content {
         background-image: url(../../../images/bg-vector-hello.png);
         background-position: center;
@@ -9,31 +13,24 @@
         padding: 51px 0 0;
 
         h2 {
-            font-family: Barlow;
-            font-weight: normal;
             font-size: 24px;
             line-height: 108%;
-            width: 190px;
+            text-align: center;
+            color: #004FB9;
             margin: 36px auto 0;
-        } 
-    }
-      
-
-    &__button {
-        animation: pulse 2s infinite;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.95);
+    
+            span {
+                font-weight: bold;
+            }
+        }
     }
 
-    70% {
-        transform: scale(1);
+    .icon-loading {
+        margin: 40px auto 13px;
     }
 
-    100% {
-        transform: scale(0.95);
+    p {
+        font-size: 14px;
+        line-height: 108%;
     }
 }
