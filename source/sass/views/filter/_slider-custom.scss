@@ -44,9 +44,9 @@
         p {
             @extend .p-blue;
             text-align: center;
-            color: $color-blue;
             font-size: 14px;
             line-height: 17px;
+            font-weight: 300;
             width: auto;
             height: auto;
         }
@@ -65,9 +65,9 @@
     right: 0;
     margin: auto;
     content: "";
-    width: 6px;
-    height: 6px;
-    background-color: #c4c4c4;
+    width: 10px;
+    height: 10px;
+    background-color: #9e9fa1;
     border-radius: 100%;
     text-align: center;
     transition: width .3s ease 0s,height .3s ease 0s,background-color .3s ease 0s;

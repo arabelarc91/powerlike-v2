@@ -1,7 +1,7 @@
 .powerlike_splash_match {
     height: 100vh;
     text-align: center;
-    color: #004FB9;
+    color: $color-blue;
 
     &__content {
         background-image: url(../../../images/bg-vector-hello.png);
@@ -16,12 +16,16 @@
             font-size: 24px;
             line-height: 108%;
             text-align: center;
-            color: #004FB9;
+            color: $color-blue;
             margin: 36px auto 0;
     
             span {
                 font-weight: bold;
             }
+        }
+
+        &__match {
+            background-color: #E5E5E5;
         }
     }
 

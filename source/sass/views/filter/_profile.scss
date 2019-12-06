@@ -9,6 +9,9 @@
         position: relative;
         
         &__content {
+            max-width: 320px;
+            margin: 0 auto;
+            
             h4 {
                 @extend .h4;
             }

@@ -9,7 +9,7 @@ mixin entel-match-detail(classie,src_img, extension, alt, texte)
     //- +entel-options("huawei", "p30 lite", "../../images/profile/","icon-gamer", ".png", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit, consectetur, voluptas quis deleniti provident illo nemo eaque nostrum assumenda tempore, suscipit nisi incidunt aspernatur molestias. Iure ipsa cum minus!")
 
 
-mixin entel-match(brand,model,img,alt,classie,src_img,extension,number_battery,number_camera,number_screen,number_capacity,battery,camera,screen,capacity,link,button)
+mixin entel-match(brand,model,img,alt,classie,src_img,extension,number_battery,battery,number_camera,camera,number_screen,screen,number_capacity,capacity,link,button)
     .slider_options__match
         h2 #[strong !{brand}] #[span !{model}]
 
@@ -17,19 +17,19 @@ mixin entel-match(brand,model,img,alt,classie,src_img,extension,number_battery,n
 
         .feature 
             .feature__battery
-                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+                img(src=img_path + 'battery-white' + extension, srcset= img_path + 'battery-white' + '@2x' + extension + ' 2x,' + img_path + 'battery-white' + extension + ' 1x', alt=alt)
                 span !{number_battery} #[br] !{battery}
             
             .feature__camera
-                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+                img(src=img_path + 'camera-white' + extension, srcset= img_path + 'camera-white' + '@2x' + extension + ' 2x,' + img_path + 'camera-white' + extension + ' 1x', alt=alt)
                 span !{number_camera} #[br] !{camera}
             
             .feature__screen
-                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)            
+                img(src=img_path + 'screen-white' + extension, srcset= img_path + 'screen-white' + '@2x' + extension + ' 2x,' + img_path + 'screen-white' + extension + ' 1x', alt=alt)
                 span !{number_screen} #[br] !{screen}
             
             .feature__capacity
-                img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+                img(src=img_path + 'memory-white' + extension, srcset= img_path + 'memory-white' + '@2x' + extension + ' 2x,' + img_path + 'memory-white' + extension + ' 1x', alt=alt)
                 span !{number_capacity} #[br] !{capacity}
 
         a.link-ficha(href=link) Ver más detalle
