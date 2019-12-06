@@ -40,10 +40,16 @@ let profile_selected = {
 
 let preselector = {
     events: function() {
+<<<<<<< HEAD
         let modality
 
         $('.powerlike__preselector .powerlike__preselector__content__buttons').click(function() {
             modality = $(this).attr('filter')            
+=======
+        $('.select-icon').click(function() {
+            $(this).toggleClass("active")
+            $('.powerlike_chooseprofile__select ul').toggleClass("active")
+>>>>>>> 6c567d72695db34f8b0acdb58c4a76a9adcec1de
         })
     }
 }
@@ -77,7 +83,7 @@ let sliders = {
     },
 
     match_device: function() {
-        $('.powerlike_devicedetail__content__match').slick({
+        $('.powerlike_devicedetail__content__match__slide').slick({
             arrows: false,
             dots: true,
             infinite: false,

@@ -195,8 +195,12 @@
         }
     }
 
-    div ul {
+    ul {
         display: none;
+
+        &.active {
+            display: block;
+        }
     }
 }
 
