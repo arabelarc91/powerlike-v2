@@ -60,7 +60,7 @@ let sliders = {
     },
 
     match_device: function() {
-        $('.powerlike_devicedetail__content__match').slick({
+        $('.powerlike_devicedetail__content__match__slide').slick({
             arrows: false,
             dots: true,
             infinite: false,
