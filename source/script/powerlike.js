@@ -14,6 +14,14 @@ let options = {
             perfilText =  $(".powerlike_options__carousel .slick-current .tag").text()
             $('#profile_name').text(perfilText)
         })
+    },
+    events: function() {
+        let perfilValue
+
+        $('.button_entel__carousel > a').click(function() {
+            perfilValue =  $(".powerlike_options__carousel .slick-current .tag").text()
+            flow.showPerfil(perfilValue)
+        })
     }
 }
 
@@ -97,11 +105,15 @@ let flow = {
                 flow.setHash('')
             }
         })
+    },
+    showPerfil: function(perfilValue) {
+        console.log(perfilValue)
     }
 }
 
 let load_options = function() {
     options.setValButton()
+    options.events()
 }
 
 let load_greeting = function() {
