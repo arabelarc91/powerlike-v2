@@ -1,13 +1,13 @@
 let saver = {
-    events : function () {
-        $('.select-icon').click(function () {
+    events : function() {
+        $('.select-icon').click(function() {
             $(this).toggleClass("active")            
         })
     }
 }
 
 let sliders = {
-    profiles : function () {
+    profiles : function() {
         $('.powerlike_options__carousel').slick({
             arrows: false,
             dots: true,
@@ -20,10 +20,23 @@ let sliders = {
         })
     },
 
-    devices : function () {
-        $(".powerlike_devicedetail__content__device").slick({
+    devices : function() {
+        $('.powerlike_devicedetail__content__device').slick({
             arrows: false,
             dots: false,
+            infinite: false,
+            mobileFirst: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            centerMode: true,
+            centerPadding: '20px'
+        })
+    },
+
+    match_device: function() {
+        $('.powerlike_devicedetail__content__match').slick({
+            arrows: false,
+            dots: true,
             infinite: false,
             mobileFirst: true,
             pauseOnFocus: false,
@@ -38,6 +51,7 @@ let initialize = function() {
     saver.events()
     sliders.profiles()
     sliders.devices()
+    sliders.match_device()
 }
 
 $(document).ready(function() {
