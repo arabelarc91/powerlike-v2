@@ -1,0 +1,28 @@
+section.powerlike_chooseprofile.influencer
+	.powerlike_chooseprofile__content
+		h5  Gamer
+			span ¿Qué haces con tu celular?
+
+		.powerlike_chooseprofile__slidecontainer
+			.powerlike_chooseprofile__slidecontainer__item
+				+range-slider("range-frecuence", "range-frecuence", "1" , "100", "50", "Días 1", "¿Con qué frecuencia juegas?")
+
+			.powerlike_chooseprofile__slidecontainer__item
+				+range-slider("range-apps", "range-apps", "1" , "100", "50", "Más de 3", "¿Cuántos App de juegos tienes instalados en tu celular?")
+
+		.powerlike_chooseprofile__select
+			p ¿Qué marca prefieres?
+			
+			div Seleccionar
+				.select-icon
+					span
+					span 
+				ul 
+					- var brands = ["Samsung", "Huawei", "Apple"];
+					for name in brands
+						li(data-value= name)= name
+
+		.button_entel__carousel
+			a(href="#") continuar
+			
+

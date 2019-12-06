@@ -6,6 +6,17 @@ let greeting = {
     }
 }
 
+let options = {
+    setValButton: function() {
+        let perfilText
+
+        $(".powerlike_options__carousel").on('afterChange', function(event, slick, currentSlide, nextSlide){
+            perfilText =  $(".powerlike_options__carousel .slick-current .tag").text()
+            $('#profile_name').text(perfilText)
+        })
+    }
+}
+
 let saver = {
     events: function() {
         $('.select-icon').click(function() {
@@ -62,7 +73,22 @@ let flow = {
         } else if (hashValue === '#/start') {
             $('.powerlike_options').addClass('active')
         }
+    },
+    backEvent: function() {
+        let hashValue
+        
+        $('.arrow-back').click(function() {
+            hashValue = window.location.hash
+
+            if (hashValue === '#/start') {
+                flow.setHash('')
+            }
+        })
     }
+}
+
+let load_options = function() {
+    options.setValButton()
 }
 
 let load_greeting = function() {
@@ -81,9 +107,11 @@ let load_slider = function() {
 let load_flow = function() {
     flow.detectPopState()
     flow.changeScreen(window.location.hash)
+    flow.backEvent()
 }
 
 let initialize = function() {
+    load_options()
     load_greeting()
     load_saver()
     load_slider()
