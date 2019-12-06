@@ -40,12 +40,3 @@ mixin entel-device(classie,src_img, extension, alt)
             img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
 
 
-mixin entel-match-detail(classie,src_img, extension, alt, texte)
-    .content_match
-        .match__item_main
-            img(src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
-            p !{texte}
-
-
-    //- +entel-options("huawei", "p30 lite", "../../images/profile/","icon-gamer", ".png", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit, consectetur, voluptas quis deleniti provident illo nemo eaque nostrum assumenda tempore, suscipit nisi incidunt aspernatur molestias. Iure ipsa cum minus!")
-

@@ -18,6 +18,19 @@
     }
 }
 
+.button-orange {
+    width: 215px;
+    height: 42px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    line-height: 42px;
+    border-radius: 50px;
+    background: #ff6702;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .box-info {
     background: $white;
     padding: 20px 15px;

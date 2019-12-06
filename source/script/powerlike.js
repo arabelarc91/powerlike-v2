@@ -49,6 +49,19 @@ let sliders = {
             centerMode: true,
             centerPadding: '20px'
         })
+    },
+
+    match_device: function() {
+        $('.powerlike_devicedetail__content__match').slick({
+            arrows: false,
+            dots: true,
+            infinite: false,
+            mobileFirst: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            centerMode: true,
+            centerPadding: '20px'
+        })
     }
 }
 
@@ -102,6 +115,7 @@ let load_saver = function() {
 let load_slider = function() {
     sliders.profiles()
     sliders.devices()
+    sliders.match_device()
 }
 
 let load_flow = function() {

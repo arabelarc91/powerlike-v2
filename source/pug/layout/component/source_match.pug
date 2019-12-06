@@ -1,4 +1,15 @@
-mixin entel-match(brand,model,img,alt,classie,src_img,extension,battery,camera,screen,capacity,link,button)
+
+mixin entel-match-detail(classie,src_img, extension, alt, texte)
+    .content_match
+        .match__item_main
+            img(src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+            p !{texte}
+
+
+    //- +entel-options("huawei", "p30 lite", "../../images/profile/","icon-gamer", ".png", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum reprehenderit, consectetur, voluptas quis deleniti provident illo nemo eaque nostrum assumenda tempore, suscipit nisi incidunt aspernatur molestias. Iure ipsa cum minus!")
+
+
+mixin entel-match(brand,model,img,alt,classie,src_img,extension,number_battery,number_camera,number_screen,number_capacity,battery,camera,screen,capacity,link,button)
     .slider_options__match
         h2 #[strong !{brand}] #[span !{model}]
 
@@ -7,19 +18,19 @@ mixin entel-match(brand,model,img,alt,classie,src_img,extension,battery,camera,s
         .feature 
             .feature__battery
                 img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
-                span !{battery}
+                span !{number_battery} #[br] !{battery}
             
             .feature__camera
                 img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
-                span !{camera}
+                span !{number_camera} #[br] !{camera}
             
             .feature__screen
                 img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)            
-                span !{screen}
+                span !{number_screen} #[br] !{screen}
             
             .feature__capacity
                 img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
-                span !{capacity}
+                span !{number_capacity} #[br] !{capacity}
 
         a.link-ficha(href=link) Ver más detalle
 
