@@ -29,6 +29,7 @@ let saver = {
     events: function() {
         $('.select-icon').click(function() {
             $(this).toggleClass("active")
+            $('.select-icon ul').css("display", "block")
         })
     }
 }
