@@ -48,30 +48,6 @@ header {
         }
     }
 
-    .arrow-back {
-        padding: 0 15px;
-        display: inline-block;
-        vertical-align: middle;
-
-        span {
-            width: 4px;
-            height: 15px;
-            margin: 0;
-            opacity: 1;
-            display: block;
-            border-radius: 10px;
-            transform: rotate(50deg);
-            background-color: $white;
-            transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
-        }
-
-        span:nth-child(2) {
-            position: relative;
-            top: -8px;
-            transform: rotate(130deg);
-        }
-    }
-
     a img  {
         &.entel-logo {
             width: 30px;

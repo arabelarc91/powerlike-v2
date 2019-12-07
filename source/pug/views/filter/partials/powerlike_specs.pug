@@ -1,5 +1,9 @@
 section.powerlike_specs
     .powerlike_specs__characteristics
+        .arrow-back 
+            span
+            span
+
         h5 Caracteristicas
 
     .powerlike_specs__content
@@ -18,8 +22,13 @@ section.powerlike_specs
 
             +source-specs-colors('Colores')
             +source-specs-battery('icon-battery', '../../images/', 'icon-battery','.png','icon battery','3000','6')
-            //- +source-specs-memory(classie,img_path,src_img,extension,alt,gb,processors)
-            //- +source-specs-screen(classie,img_path,src_img,extension,alt,screen,screen_specs)         
-            //- +source-specs-camera(classie,img_path,src_img,extension,alt,processors,frontal)        
-            //- +source-specs-size(classie,img_path,src_img,extension,alt,inches_h,inches_mm_h,inches_w,inches_mm_w,deep,deep_mm,weigth,gr)
-            //- +source-specs-red(classie,img_path,src_img,extension,alt,two,three,four,ltefour)
+            +source-specs-memory('icon-memory','../../images/','icon-memory','.png','icon memory','32','Octa Core 2.3 GHz Y 1.7GHz')
+            +source-specs-screen('icon-screen','../../images/','icon-screen','.png','icon screen','5.84','retina display')         
+            +source-specs-camera('icon-camera','../../images/','icon-camera','.png','icon camera','16MP + 2MP','16MP')        
+            +source-specs-size('icon-device','../../images/','icon-device','.png','icon size','5,67','144,0','2,81','71,4','0,32','8,1','6,63','188')
+            +source-specs-red('icon-red','../../images/','icon-red','.png','icon red','2G','3G','4G','LTE (4G)')
+
+        +retina_img('mediospago-info','mediospago', '.png', 'delivery')
+        
+    .button_entel__carousel
+        a(href="javascript:void(0)") Lo Quiero

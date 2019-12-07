@@ -1,6 +1,18 @@
 .powerlike_specs {
     padding: 0; 
 
+    .button_entel__carousel {
+        position: relative;
+        left: unset;
+        bottom: unset;
+        transform: none;
+        margin: 21px auto;
+    }
+
+    &.active {
+        z-index: 2 !important;
+    }
+
     &__content {
         img {
             width: 280px;
@@ -10,8 +22,9 @@
     }
 
     &__characteristics {
-        height: 73px;
-        padding: 21px 0;
+        height: 51px;
+        padding: 0 20px;
+        line-height: 51px;
         background-color: $color-blue; 
 
         h5 {
@@ -19,6 +32,10 @@
             color: $white;
             font-weight: 400;
             text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            top: -4px;
         }        
     }
 
@@ -34,7 +51,28 @@
 
         .box-specs {
             @extend .box-info;
+            padding: 0 15px;
             margin-bottom: 3px;
+        }
+
+        .icon-specs-colors {
+            width: calc(100%/2);    
+
+            .color-red,
+            .color-gray,
+            .color-purple {
+                padding: 3px;
+                margin: 0 5px;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 50%;
+
+                .circle {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+            }
         }
 
         .rating {
@@ -44,16 +82,31 @@
         .icon-specs,
         .specs-detail,
         .brand,
-        .model {
+        .model,
+        .specs-colors-detail,
+        .icon-specs-colors {
             display: inline-block;
             vertical-align: middle;
         }
 
+        .specs-colors-detail {
+            @extend .h5;
+            color: $color-blue;
+            font-weight: 500;
+            padding: 0 !important;
+            text-align: right;
+        }
+
         .brand,
-        .model  {
+        .model,
+        .specs-colors-detail  {
             margin: 15px auto;
             padding: 10px 0 0 0;
             width: calc(100%/2);
+
+            p {
+                line-height: 25px;  
+            }
 
             p strong {
                 font-weight: 800;
@@ -69,12 +122,22 @@
 
             span {
                 color: $color-blue;
+                font-size: 14px;
                 vertical-align: middle;
-                
+
                 i {
-                    font-size : 14px;
+                    // color: $gray-placeholder;
+                    color: $color-light-blue;
+                    position: relative;
+                    font-size : 12px;
+                    font-weight: 800;
                     margin: 0 3px;
+                    top: -1px;
                 }
+
+                // i.active {
+                //     color: $color-light-blue;
+                // }
             }
 
             span:nth-child(2) {
@@ -84,7 +147,32 @@
             p {
                 @extend .p-pink;
                 color: $color-blue;
+                line-height: 12px;
             }
         }
     }
 }
+
+
+.color {
+    &-red {
+        border: 1px solid $red;
+        .circle {
+            background-color: $red;
+        }
+    }
+
+    &-gray {
+        border: 1px solid $gray;
+        .circle {
+            background-color: $gray;
+        }
+    }
+
+    &-purple {
+        border: 1px solid purple;
+        .circle {
+            background-color: purple;
+        }
+    }
+} 

@@ -1,9 +1,12 @@
 mixin source-specs-colors(color)
     .box-specs
         .icon-specs-colors
-            .color-1
-            .color-2
-            .color-3
+            .color-gray
+                .circle
+            .color-red
+                .circle
+            .color-purple
+                .circle
 
         .specs-colors-detail !{color}
   
@@ -14,11 +17,9 @@ mixin source-specs-battery(classie,img_path,src_img,extension,alt,mAh,hr)
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Batería
                 p !{mAh} mAh
                 p Duración: !{hr} horas
@@ -30,13 +31,11 @@ mixin source-specs-memory(classie,img_path,src_img,extension,alt,gb,processors)
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Memoria interna
-                p !{gb}
+                p !{gb}GB capacidad
                 p !{processors}   
 
 mixin source-specs-screen(classie,img_path,src_img,extension,alt,screen,screen_specs)
@@ -46,27 +45,23 @@ mixin source-specs-screen(classie,img_path,src_img,extension,alt,screen,screen_s
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Pantalla
                 p Tamaño !{screen}" Super
                 p !{screen_specs}                   
 
-mixin source-specs-camera(classie,img_path,src_img,extension,alt,processors,frontal)
+mixin source-specs-camera(classie,img_path,src_img,extension,alt,principal,frontal)
     .box-specs
         .icon-specs
             img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Cámara
                 p Cámara principal !{principal}
                 p Cámara frontal !{frontal}              
@@ -78,11 +73,9 @@ mixin source-specs-size(classie,img_path,src_img,extension,alt,inches_h,inches_m
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Tamaño y peso
 
                 p Altura !{inches_h} inches (!{inches_mm_h} mm)
@@ -97,10 +90,8 @@ mixin source-specs-red(classie,img_path,src_img,extension,alt,two,three,four,lte
         .specs-detail
             .rating
                 span 
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
-                    i &#9733;
+                    - for (var i=1; i<=5; i++) {
+                        i &#9733;
+                    - }
                 span Red
                 p !{two},!{three},!{four},!{ltefour}
