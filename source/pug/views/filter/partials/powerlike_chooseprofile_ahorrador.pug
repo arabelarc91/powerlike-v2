@@ -1,28 +1,17 @@
 section.powerlike_chooseprofile.ahorrador
 	.powerlike_chooseprofile__content
-		h5  Gamer
-			span ¿Qué haces con tu celular?
+		h5  Ahorrador
+			span ¿Qué haces con tu celular?			
 
-		.powerlike_chooseprofile__slidecontainer
-			.powerlike_chooseprofile__slidecontainer__item
-				+range-slider("range-frecuence", "range-frecuence", "1" , "100", "50", "Días 1", "¿Con qué frecuencia juegas?")
+		.counter_box
+			p ¿Cuánto dinero estas dispuesto a gastar?
 
-			.powerlike_chooseprofile__slidecontainer__item
-				+range-slider("range-apps", "range-apps", "1" , "100", "50", "Más de 3", "¿Cuántos App de juegos tienes instalados en tu celular?")
+			div
+				a(href="javascript:void(0)").counter -
+
+				input(type="tel" value="S/ 400")
+
+				a(href="javascript:void(0)").counter +
 
 		.powerlike_chooseprofile__select
-			p ¿Qué marca prefieres?
-			
-			div Seleccionar
-				.select-icon
-					span
-					span 
-			ul 
-				- var brands = ["Samsung", "Huawei", "Apple"];
-				for name in brands
-					li(data-brand= name)= name
-
-		.button_entel__carousel
-			a(href="#") continuar
-			
-
+			a(href="javascript:void(0)") continuar
