@@ -1,0 +1,106 @@
+mixin source-specs-colors(color)
+    .box-specs
+        .icon-specs-colors
+            .color-1
+            .color-2
+            .color-3
+
+        .specs-colors-detail !{color}
+  
+mixin source-specs-battery(classie,img_path,src_img,extension,alt,mAh,hr)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Batería
+                p !{mAh} mAh
+                p Duración: !{hr} horas
+
+mixin source-specs-memory(classie,img_path,src_img,extension,alt,gb,processors)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Memoria interna
+                p !{gb}
+                p !{processors}   
+
+mixin source-specs-screen(classie,img_path,src_img,extension,alt,screen,screen_specs)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Pantalla
+                p Tamaño !{screen}" Super
+                p !{screen_specs}                   
+
+mixin source-specs-camera(classie,img_path,src_img,extension,alt,processors,frontal)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Cámara
+                p Cámara principal !{principal}
+                p Cámara frontal !{frontal}              
+
+mixin source-specs-size(classie,img_path,src_img,extension,alt,inches_h,inches_mm_h,inches_w,inches_mm_w,deep,deep_mm,weigth,gr)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Tamaño y peso
+
+                p Altura !{inches_h} inches (!{inches_mm_h} mm)
+                p Anchura !{inches_w} inches (!{inches_mm_w} mm)
+                p Profundidad !{deep} inch (!{deep_mm} mm)
+                p Peso !{weigth} onzas (!{gr} gramos)
+
+mixin source-specs-red(classie,img_path,src_img,extension,alt,two,three,four,ltefour)
+    .box-specs
+        .icon-specs
+            img(class=classie src=img_path + src_img + extension, srcset= img_path + src_img + '@2x' + extension + ' 2x,' + img_path + src_img + extension + ' 1x', alt=alt)
+        .specs-detail
+            .rating
+                span 
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                    i &#9733;
+                span Red
+                p !{two},!{three},!{four},!{ltefour}
