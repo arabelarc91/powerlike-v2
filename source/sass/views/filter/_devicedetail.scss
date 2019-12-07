@@ -1,4 +1,8 @@
 .powerlike {
+    &_devicedetail {
+        overflow: scroll;
+    }
+
     &_devicedetail__content {
         background-color: $white;
     }

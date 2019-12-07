@@ -40,16 +40,16 @@ let profile_selected = {
 
 let preselector = {
     events: function() {
-<<<<<<< HEAD
-        let modality
-
         $('.powerlike__preselector .powerlike__preselector__content__buttons').click(function() {
-            modality = $(this).attr('filter')            
-=======
-        $('.select-icon').click(function() {
-            $(this).toggleClass("active")
-            $('.powerlike_chooseprofile__select ul').toggleClass("active")
->>>>>>> 6c567d72695db34f8b0acdb58c4a76a9adcec1de
+            flow.setHash('/matches')
+        })
+    }
+}
+
+let matches = {
+    events: function() {
+        $('.powerlike_devicedetail .link-detalle').click(function() {
+            flow.setHash('/detalle')
         })
     }
 }
@@ -96,6 +96,15 @@ let sliders = {
     }
 }
 
+let selects = {
+    events: function() {
+        $('.select-icon').click(function() {
+            $(this).toggleClass("active")
+            $('.powerlike_chooseprofile__select ul').toggleClass("active")
+        })
+    }
+}
+
 let flow = {
     setHash: function(hash) {
         // '/value'
@@ -133,7 +142,13 @@ let flow = {
             $('.powerlike_chooseprofile.ahorrador').addClass('active')
 
         } else if (hashValue === '#/modalidad') {
-            $('.powerlike__preselector').addClass('active')            
+            $('.powerlike__preselector').addClass('active')
+
+        } else if (hashValue === '#/matches') {
+            $('.powerlike_devicedetail').addClass('active')
+
+        } else if (hashValue === '#/detalle') {
+            $('.powerlike_devicedetail').addClass('active')
         }
     },
     showPerfil: function(perfilText) {
@@ -155,11 +170,13 @@ let flow = {
                 // move back to profile
                 let referer = $('.powerlike__preselector').attr('referer')
                 
-                if (referer != undefined) {
+                if (referer !== undefined) {
                     flow.setHash('/' + referer)
                 } else {
                     flow.setHash('')
-                }            
+                }
+            } else if (hashValue === '#/matches') {
+                flow.setHash('/modalidad')                
             }
         })
     }
@@ -190,10 +207,18 @@ let load_slider = function() {
     sliders.match_device()
 }
 
+let load_selects = function() {
+    selects.events()
+}
+
 let load_flow = function() {
     flow.detectPopState()
     flow.changeScreen(window.location.hash)
     flow.backEvent()
+}
+
+let load_matches = function() {
+    matches.events()
 }
 
 let initialize = function() {    
@@ -202,7 +227,9 @@ let initialize = function() {
     load_profile_selected()
     load_preselector()
     load_slider()
+    load_selects()
     load_flow()
+    load_matches()
 }
 
 $(document).ready(function() {
