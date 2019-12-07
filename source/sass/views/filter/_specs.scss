@@ -1,0 +1,90 @@
+.powerlike_specs {
+    padding: 0; 
+
+    &__content {
+        img {
+            width: 280px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+
+    &__characteristics {
+        height: 73px;
+        padding: 21px 0;
+        background-color: $color-blue; 
+
+        h5 {
+            @extend .h5;
+            color: $white;
+            font-weight: 400;
+            text-align: center;
+        }        
+    }
+
+    &__main {
+        width: 280px;
+        margin: 10px auto;
+        border-top: 0.4px solid #B2CBE2;  
+
+        h4 {
+            font-weight: 500;
+            margin: 10px 0 0 0;
+        } 
+
+        .box-specs {
+            @extend .box-info;
+            margin-bottom: 3px;
+        }
+
+        .rating {
+            text-align: right;
+        }
+
+        .icon-specs,
+        .specs-detail,
+        .brand,
+        .model {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .brand,
+        .model  {
+            margin: 15px auto;
+            padding: 10px 0 0 0;
+            width: calc(100%/2);
+
+            p strong {
+                font-weight: 800;
+            }
+        }
+
+        .icon-specs {
+            width: 20%;
+        }
+
+        .specs-detail {
+            width: 80%;
+
+            span {
+                color: $color-blue;
+                vertical-align: middle;
+                
+                i {
+                    font-size : 14px;
+                    margin: 0 3px;
+                }
+            }
+
+            span:nth-child(2) {
+                font-weight: 600;
+            }
+
+            p {
+                @extend .p-pink;
+                color: $color-blue;
+            }
+        }
+    }
+}
