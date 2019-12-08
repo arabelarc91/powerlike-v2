@@ -14,6 +14,21 @@
             right: 0;
             opacity: 1;
             z-index: 1;
+            animation-name: bounce;
+            animation-duration: 500ms;
+            animation-timing-function: ease;
+        }
+
+        @-webkit-keyframes bounce {
+            0%   {right: -10px;}
+            50%  {right: 10px;}
+            100% {right: 0;}
+        }
+        
+        @keyframes bounce {
+            0%   {right: -10px;}
+            50%  {right: 10px;}
+            100% {right: 0;}
         }
     }
 }
@@ -174,8 +189,6 @@
     }
 }
 
-
-.powerlike_saver__select,
 .powerlike_chooseprofile__select {
     width: 244px;
     margin: 0 auto;
@@ -220,10 +233,26 @@
     }
 
     ul {
-        display: none;
+        opacity: 0;
+        position: relative;
+        top: -25px;
+        z-index: -1;
+        @include transition(all 300ms ease 0s);
+        padding: 15px;
+        border-radius: 3px;
+        height: 200px;
+        overflow-y: scroll;
+
+        li {
+            color: #000000;
+            padding: 7px 5px;
+        }
 
         &.active {
-            display: block;
+            opacity: 1;
+            z-index: 1;
+            background-color: #ffffff;
+            box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
         }
     }
 }

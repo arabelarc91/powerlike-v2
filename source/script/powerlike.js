@@ -2,8 +2,12 @@
 // ------- function steps --------
 // -------------------------------
 
-let profile,
-    modality
+var globalBateryMin,
+    globalBateryMax,
+    globalCameraMin,
+    globalCameraMax,
+    globalRamMin,
+    globalRamMax
 
 // -------------------------------
 // ------- function steps --------
@@ -49,6 +53,12 @@ let preselector = {
     events: function() {
         $('.powerlike__preselector .powerlike__preselector__content__buttons').click(function() {
             flow.setHash('/matches')
+            console.log(globalBateryMin)
+            console.log(globalBateryMax)
+            console.log(globalCameraMin)
+            console.log(globalCameraMax)
+            console.log(globalRamMin)
+            console.log(globalRamMax)
         })
     }
 }
@@ -106,8 +116,8 @@ let sliders = {
 
 let selects = {
     events: function() {
-        $('.select-icon').click(function() {
-            $(this).toggleClass("active")
+        $('.select-icon').parent().click(function() {
+            $(this).find('.select-icon').toggleClass("active")
             $('.powerlike_chooseprofile__select ul').toggleClass("active")
         })
     }
@@ -132,16 +142,26 @@ let flow = {
         // decisions tree
         if (hashValue === '') {
             $('.powerlike_profile_market').addClass('active')
+
         } else if (hashValue === '#/perfiles') {
             $('.powerlike_options').addClass('active')
+
         } else if (hashValue === '#/gamer') {
             $('.powerlike_chooseprofile.gamer').addClass('active')
+            ranges.nullCamera()
+
         } else if (hashValue === '#/influencer') {
             $('.powerlike_chooseprofile.influencer').addClass('active')
+            ranges.nullCamera()
+
         } else if (hashValue === '#/aventurero') {
             $('.powerlike_chooseprofile.aventurero').addClass('active')
+            ranges.nullRam()
+
         } else if (hashValue === '#/ahorrador') {
             $('.powerlike_chooseprofile.ahorrador').addClass('active')
+            ranges.nullBateryCameraRam()
+
         } else if (hashValue === '#/modalidad') {
             $('.powerlike__preselector').addClass('active')
 
@@ -193,20 +213,38 @@ let ranges = {
         range1.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range1.next().text('Más de 1 horas')
+                // global mAh
+                globalBateryMin = 750
+                globalBateryMax = 1000
             } else if (34 <= this.value && this.value <= 66) {
                 $range1.next().text('Más de 3 horas')
+                // global mAh
+                globalBateryMin = 1001
+                globalBateryMax = 3000
             } else if (67 <= this.value && this.value <= 100) {
                 $range1.next().text('Más de 5 horas')
+                // global mAh
+                globalBateryMin = 3001
+                globalBateryMax = 9999
             }
         }
 
         range2.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range2.next().text('Más de 1 juego')
+                // global GBs
+                globalRamMin = 0
+                globalRamMax = 0.9
             } else if (34 <= this.value && this.value <= 66) {
                 $range2.next().text('Más de 3 juegos')
+                // global GBs
+                globalRamMin = 1
+                globalRamMax = 2.9
             } else if (67 <= this.value && this.value <= 100) {
                 $range2.next().text('Más de 5 juegos')
+                // global GBs
+                globalRamMin = 3
+                globalRamMax = 4
             }
         }
     },
@@ -219,20 +257,38 @@ let ranges = {
         range1.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range1.next().text('Más de 1 horas')
+                // global mAh 
+                globalBateryMin = 750
+                globalBateryMax = 1000
             } else if (34 <= this.value && this.value <= 66) {
                 $range1.next().text('Más de 3 horas')
+                // global mAh
+                globalBateryMin = 1001
+                globalBateryMax = 3000
             } else if (67 <= this.value && this.value <= 100) {
                 $range1.next().text('Más de 5 horas')
+                // global mAh
+                globalBateryMin = 3001
+                globalBateryMax = 9999
             }
         }
 
         range2.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range2.next().text('Poco')
+                // global MP
+                globalCameraMin = 0
+                globalCameraMax = 12
             } else if (34 <= this.value && this.value <= 66) {
                 $range2.next().text('Mucho')
+                // global MP
+                globalCameraMin = 13
+                globalCameraMax = 21
             } else if (67 <= this.value && this.value <= 100) {
                 $range2.next().text('Demasiado')
+                // global MP
+                globalCameraMin = 22
+                globalCameraMax = 53
             }
         }
     },
@@ -245,22 +301,72 @@ let ranges = {
         range1.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range1.next().text('Poco')
+                // global MP
+                globalCameraMin = 0
+                globalCameraMax = 12
             } else if (34 <= this.value && this.value <= 66) {
                 $range1.next().text('Mucho')
+                // global MP
+                globalCameraMin = 13
+                globalCameraMax = 21
             } else if (67 <= this.value && this.value <= 100) {
                 $range1.next().text('Demasiado')
+                // global MP
+                globalCameraMin = 22
+                globalCameraMax = 53
             }
         }
 
         range2.oninput = function() {
             if (0 <= this.value && this.value <= 33) {
                 $range2.next().text('Más de 1 apps')
+                // global GBs
+                globalRamMin = 0
+                globalRamMax = 0.9
             } else if (34 <= this.value && this.value <= 66) {
                 $range2.next().text('Más de 3 apps')
+                // global GBs
+                globalRamMin = 1
+                globalRamMax = 2.9
             } else if (67 <= this.value && this.value <= 100) {
                 $range2.next().text('Más de 5 apps')
+                // global GBs
+                globalRamMin = 3
+                globalRamMax = 4
             }
         }
+    },
+    nullBatery: function() {
+        globalBateryMin = 0,
+        globalBateryMax = 0,
+        globalCameraMin = 13,
+        globalCameraMax = 21,
+        globalRamMin = 1,
+        globalRamMax = 2.9
+    },
+    nullCamera: function() {
+        globalBateryMin = 1001,
+        globalBateryMax = 3000,
+        globalCameraMin = 0,
+        globalCameraMax = 0,
+        globalRamMin = 1,
+        globalRamMax = 2.9
+    },
+    nullRam: function() {
+        globalBateryMin = 1001,
+        globalBateryMax = 3000,
+        globalCameraMin = 13,
+        globalCameraMax = 21,
+        globalRamMin = 0,
+        globalRamMax = 0
+    },
+    nullBateryCameraRam: function() {
+        globalBateryMin = 0,
+        globalBateryMax = 0,
+        globalCameraMin = 0,
+        globalCameraMax = 0,
+        globalRamMin = 0,
+        globalRamMax = 0
     }
 }
 
