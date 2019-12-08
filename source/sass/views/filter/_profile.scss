@@ -161,6 +161,11 @@
             h3 {
                 @extend .h3;
             }
+
+            p {
+                @extend .p-blue;
+                margin: 0 auto;
+            }
         }
     }
 

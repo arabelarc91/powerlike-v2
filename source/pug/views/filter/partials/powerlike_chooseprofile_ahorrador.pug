@@ -14,4 +14,13 @@ section.powerlike_chooseprofile.ahorrador
 				a(href="javascript:void(0)").counter +
 
 		.powerlike_chooseprofile__select
-			a(href="javascript:void(0)") continuar
+			p ¿Qué marca prefieres?
+			
+			div Seleccionar
+				.select-icon
+					span
+					span 
+			ul 
+				- var brands = ["Samsung", "Apple", "Huawei", "Xiaomi", "Motorola", "LG", "Sony", "Nokia"];
+				for name in brands
+					li(data-brand= name)= name
