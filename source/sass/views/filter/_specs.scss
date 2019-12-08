@@ -13,6 +13,12 @@
         z-index: 2 !important;
     }
 
+    &__scroll {
+        overflow-y: scroll;
+        height: 100%;
+        padding-bottom: 60px;
+    }
+
     &__content {
         img {
             width: 280px;
@@ -24,7 +30,7 @@
     &__characteristics {
         height: 51px;
         padding: 0 20px;
-        line-height: 51px;
+        line-height: 55px;
         background-color: $color-blue; 
 
         h5 {

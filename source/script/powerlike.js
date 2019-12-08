@@ -1,3 +1,14 @@
+// -------------------------------
+// ------- function steps --------
+// -------------------------------
+
+let profile,
+    modality
+
+// -------------------------------
+// ------- function steps --------
+// -------------------------------
+
 let greeting = {
     events: function() {
         $('.powerlike_profile_market__content__options__button[filter="persona"]').click(function() {            
@@ -44,13 +55,15 @@ let preselector = {
 
 let matches = {
     events: function() {
-        $('.powerlike_devicedetail .link-detalle').click(function() {
+        $('.powerlike_devicedetail .link-detalle,.powerlike_devicedetail .link-ficha').click(function() {
             flow.setHash('/detalle')
         })
     }
 }
 
-// -----------------------------
+// -------------------------------
+// ------- general funcions ------
+// -------------------------------
 
 let sliders = {
     profiles: function() {
@@ -170,21 +183,112 @@ let flow = {
     }
 }
 
-// -----------------------------
+let ranges = {
+    gamer: function() {
+        let range1 = document.getElementById('range-gamer-frecuence'),
+            $range1 = $('#range-gamer-frecuence'),
+            range2 = document.getElementById('range-gamer-apps'),
+            $range2 = $('#range-gamer-apps')
+
+        range1.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range1.next().text('Más de 1 horas')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range1.next().text('Más de 3 horas')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range1.next().text('Más de 5 horas')
+            }
+        }
+
+        range2.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range2.next().text('Más de 1 juego')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range2.next().text('Más de 3 juegos')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range2.next().text('Más de 5 juegos')
+            }
+        }
+    },
+    influencer: function() {
+        let range1 = document.getElementById('range-influencer-apps'),
+            $range1 = $('#range-influencer-apps'),
+            range2 = document.getElementById('range-influencer-nivel'),
+            $range2 = $('#range-influencer-nivel')
+
+        range1.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range1.next().text('Más de 1 horas')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range1.next().text('Más de 3 horas')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range1.next().text('Más de 5 horas')
+            }
+        }
+
+        range2.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range2.next().text('Poco')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range2.next().text('Mucho')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range2.next().text('Demasiado')
+            }
+        }
+    },
+    aventurero: function() {
+        let range1 = document.getElementById('range-aventurero-fotos'),
+            $range1 = $('#range-aventurero-fotos'),
+            range2 = document.getElementById('range-aventurero-apps'),
+            $range2 = $('#range-aventurero-apps')
+
+        range1.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range1.next().text('Poco')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range1.next().text('Mucho')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range1.next().text('Demasiado')
+            }
+        }
+
+        range2.oninput = function() {
+            if (0 <= this.value && this.value <= 33) {
+                $range2.next().text('Más de 1 apps')
+            } else if (34 <= this.value && this.value <= 66) {
+                $range2.next().text('Más de 3 apps')
+            } else if (67 <= this.value && this.value <= 100) {
+                $range2.next().text('Más de 5 apps')
+            }
+        }
+    }
+}
+
+// -------------------------------
+// --------- load funcions -------
+// -------------------------------
 
 let load_greeting = function() {
     greeting.events()
 }
+
 let load_profiles = function() {
     profiles.setValButton()
     profiles.events()
 }
+
 let load_profile_selected = function() {
     profile_selected.events()
 }
+
 let load_preselector = function() {
     preselector.events()
 }
+
+let load_matches = function() {
+    matches.events()
+}
+
 let load_slider = function() {
     sliders.profiles()
     sliders.devices()
@@ -201,20 +305,28 @@ let load_flow = function() {
     flow.backEvent()
 }
 
-let load_matches = function() {
-    matches.events()
+let load_range = function() {
+    ranges.gamer()
+    ranges.influencer()
+    ranges.aventurero()
 }
+
+// -------------------------------
+// --------- init funcion --------
+// -------------------------------
 
 let initialize = function() {    
     load_greeting()
     load_profiles()
     load_profile_selected()
     load_preselector()
+    load_matches()
     load_slider()
     load_selects()
     load_flow()
-    load_matches()
+    load_range()
 }
+
 $(document).ready(function() {
     initialize()
 })

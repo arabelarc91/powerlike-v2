@@ -32,7 +32,7 @@ mixin entel-match(brand,model,img,alt,classie,src_img,extension,number_battery,b
                 img(src=img_path + 'memory-white' + extension, srcset= img_path + 'memory-white' + '@2x' + extension + ' 2x,' + img_path + 'memory-white' + extension + ' 1x', alt=alt)
                 span !{number_capacity} #[br] !{capacity}
 
-        a.link-ficha(href=link) Ver más detalle
+        a.link-ficha(href="javascript:void(0)") Ver más detalle
 
         .button-ficha
-            a(href="#") Lo quiero
+            a(href="javascript:void(0)") Lo quiero
