@@ -13,7 +13,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     position: relative;
-    height: 200px;
+    height: 280px;
 
     &.slick-current {
         border: 2px solid $pink;
@@ -51,7 +51,7 @@
         p {
             @extend .p-blue;
             text-align: center;
-            font-size: 14px;
+            font-size: 17px;
             line-height: 17px;
             font-weight: 300;
             width: auto;
