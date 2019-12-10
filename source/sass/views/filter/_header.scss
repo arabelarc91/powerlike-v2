@@ -1,8 +1,6 @@
-
 header {
     width: 100%;
     height: 50px;
-    line-height: 50px;
     position: absolute;
     padding: 0 20px;
     text-align: left;
@@ -12,68 +10,56 @@ header {
     right: 0;
     z-index: 2;
     background-color: #004FB9;
-
-
-    @media (min-width: $tablet-m) {
-        width: 100%;
-        padding: 0 21px;
-    }
-
-    @media (min-width: $laptop-s) {
-        width: 946px;
-        height: 70px;
-        line-height: 60px;
-    }
-
-    @media (min-width: $laptop-m) {
-        width: 1122px;
-    }
-
-    @media (min-width: $desktop-s) {
-        width: 1170px;
-        height: 80px;
-        line-height: 70px;
-    }
    
     a {
         display: inline-block;
         vertical-align: middle;
-        margin: 0;
-        padding: 5px;
-        transition: opacity 200ms ease 0s;
-        opacity: 1;
+        border-left: 1px solid #ffffff;
+        padding-left: 10px;
 
-        &:hover {
-            opacity: 0.85;
+        img {
+            width: 33px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        span {
+            color: #ffffff;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            margin-left: 8px;
         }
     }
 
-    a img  {
-        &.entel-logo {
-            width: 30px;
+    .arrow-back {
+        padding: 0 15px;
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        width: 40px;
+        position: relative;
+    
+        span {
+            width: 4px;
+            height: 16px;
+            display: block;
+            border-radius: 10px;
+            background-color: $white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
 
-            @media (min-width: $desktop-s) {
-                width: auto;
-            }
+        span:nth-child(1) {
+            transform: rotate(50deg);
+            top: 12px;
         }
     
-        &.entel-ecommerce {
-            width: auto;
-
-            @media (min-width: $desktop-s) {
-                width: auto;
-            }
+        span:nth-child(2) {
+            transform: rotate(130deg);
+            top: 20px;
         }
-    }
-
-
-    span {
-        width: 1px;
-        height: 22px;
-        color: $white;
-        opacity: 0.5;
-        margin: 0 10px;
-        vertical-align: top;
-        background-color: $white;
     }
 }

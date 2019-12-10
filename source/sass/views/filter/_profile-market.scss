@@ -1,12 +1,11 @@
 .powerlike_profile_market {
     text-align: center;
-    padding-top: 65px;
-    height: 100vh;
     background-color: #F3F7F9;
 
     &__content {
         h2 {
             @extend .h2;
+            margin-bottom: 15px;
         }
     
         p {
@@ -15,20 +14,20 @@
 
         &__options {
             width: 266px;
-            margin: 15px auto 0;
+            margin: 0 auto;
     
             &__button {
                 width: 266px;
                 height: 57px;
                 display: block;
                 text-decoration: none;
-                text-align: center;
+                text-align: left;
                 background: #FFFFFF;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
                 border-radius: 11px;
                 position: relative;
                 margin: 14px auto;
-                padding: 20px;
+                padding: 20px 20px 20px 70px;
                 transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
     
                 & > span {
@@ -40,24 +39,17 @@
                 }
     
                 & > img {
-                    float: left;
-                    margin-top: -3px;
+                    position: absolute;
+                    top: 15px;
+                    left: 25px;
                 }
     
                 & > img.icon-arrow {
-                    float: right;
-                }   
-                
-                &:active {
-                    line-height: 23px;
-                    box-shadow: none;
-
-                    span, 
-                    img {
-                        position: relative;
-                        top: 1px;
-                    }
-                }                
+                    position: absolute;
+                    top: 16px;
+                    left: inherit;
+                    right: 25px;
+                }             
             }
         }        
     }
