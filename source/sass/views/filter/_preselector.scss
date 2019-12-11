@@ -1,126 +1,50 @@
-.entel-powerlike__preselector {
-    text-align: center;
-    color: #004FB9;
-    padding-top: 79px;
-    height: 100vh;
-
-    p {
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 108%;
-    }
-
-    h2 {
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 108%;
-    }
+.powerlike__preselector {
+    background-color: #F3F7F9;
 
     &__content {
-        text-align: left;
-        margin: 19px 0;
+        max-width: 320px;
+        margin: 40px auto 0 auto;
 
-        &__butons {
-            display: block;
-            width: 249px;
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: 700;
-            text-decoration: none;
-            text-align: left;
-            background: #FFFFFF;
-            box-shadow: 0px 4px 4px rgba(125, 164, 201, 0.25);
-            border-radius: 6px;
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            line-height: 24px;
+
+            span {
+                font-size: 20px;
+                font-weight: 700;
+                display: block;
+            }
+        }
+        
+        ul {
+            width: 250px;
             height: 66px;
             line-height: 66px;
-            padding-left: 33px;
-            -webkit-transition: all 400ms ease 0s;
-            -moz-transition: all 400ms ease 0s;
-            -o-transition: all 400ms ease 0s;
-            transition: all 400ms ease 0s;
-            position: relative;
-            margin: 8px auto;
-            transition: all 0.5s cubic-bezier(0.25, 1.7, 0.35, 0.8);
+            margin: 30px auto 0 auto;
 
-            &:hover {
-                background-color: #004FB9;
-                color: #ffffff;
+            li {
+                box-shadow: 0px 4px 4px rgba(125, 164, 201, 0.25);
+                border-radius: 6px;
+                background-color: #ffffff;
+                position: relative;
+                padding-left: 80px;
+                margin: 8px 0;
+                font-size: 14px;
+                font-weight: bold;
 
-                > .no--hover {
-                    opacity: 0;
-                    visibility: hidden;
-                    display: none;        
+                img {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
                 }
 
-                > .hover {
-                    opacity: 1;
-                    visibility: visible;
-                    display: inline-block;
-
-                    @media (min-width: 768px) {
-                        display: block;
-                        margin: 0 auto;
-                    }
-                }
-            }
-
-            & > .no--hover {
-                opacity: 1;
-                visibility: visible;
-                display: inline-block;
-                @media (min-width: 768px) {
-                    display: block;
-                }
-            }
-            
-            & > .hover {
-                opacity: 0;
-                visibility: hidden;
-                display: none;
-            }
-
-            & > img {
-                vertical-align: middle;
-                -webkit-transition: all 400ms ease 0s;
-                -moz-transition: all 400ms ease 0s;
-                -o-transition: all 400ms ease 0s;
-                transition: all 400ms ease 0s;
-
-                @media (min-width: 1260px) {
-                    width: auto !important;
-                }
-            }
-
-            &:nth-child(1) > img {
-                width: 30px;
-                margin-right: 13px;
-                @media (min-width: 768px) {
-                    margin: 0 auto 15px !important;
-                }
-            }
-            &:nth-child(2) > img {
-                width: 45px;
-                margin-left: -10px;
-                margin-right: 9px;
-                @media (min-width: 768px) {
-                    margin: 5px auto 25px !important;
-                }
-            }
-            &:nth-child(3) > img {
-                width: 23px;
-                margin-right: 22px;
-                @media (min-width: 768px) {
-                    margin: 5px auto 25px !important;
-                }
-            }
-            &:nth-child(4) > img {
-                width: 38px;
-                margin-left: -7px;
-                margin-right: 13px;
-                @media (min-width: 768px) {
-                    margin: 5px auto 25px !important;
-                }
-            }
+                &:nth-child(1) img { left: 30px; }
+                &:nth-child(2) img { left: 24px; }
+                &:nth-child(3) img { left: 33px; }
+                &:nth-child(4) img { left: 27px; }
+            }            
         }
     }
 }

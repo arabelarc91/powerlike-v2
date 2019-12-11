@@ -13,14 +13,15 @@ section.powerlike_chooseprofile.aventurero
 		.powerlike_chooseprofile__select
 			p ¿Qué marca prefieres?
 			
-			div Seleccionar
-				.select-icon
-					span
-					span 
-			ul 
-				- var brands = ["Samsung", "Apple", "Huawei", "Xiaomi", "Motorola", "LG", "Sony", "Nokia"];
-				for name in brands
-					li(data-brand= name)= name
+			select(name="brands")
+				option(value="Samsung", selected="selected") Samsung
+				option(value="Apple") Apple
+				option(value="Huawei") Huawei
+				option(value="Xiaomi") Xiaomi
+				option(value="Motorola") Motorola
+				option(value="LG") LG
+				option(value="Sony") Sony
+				option(value="Nokia") Nokia
 
 		.button_entel__carousel
 			a(href="javascript:void(0)") continuar

@@ -31,35 +31,35 @@ header {
             margin-left: 8px;
         }
     }
+}
 
-    .arrow-back {
-        padding: 0 15px;
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-        width: 40px;
-        position: relative;
-    
-        span {
-            width: 4px;
-            height: 16px;
-            display: block;
-            border-radius: 10px;
-            background-color: $white;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+.arrow-back {
+    padding: 0 15px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 40px;
+    position: relative;
 
-        span:nth-child(1) {
-            transform: rotate(50deg);
-            top: 12px;
-        }
-    
-        span:nth-child(2) {
-            transform: rotate(130deg);
-            top: 20px;
-        }
+    span {
+        width: 4px;
+        height: 16px;
+        display: block;
+        border-radius: 10px;
+        background-color: $white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    span:nth-child(1) {
+        transform: rotate(50deg);
+        top: 12px;
+    }
+
+    span:nth-child(2) {
+        transform: rotate(130deg);
+        top: 20px;
     }
 }

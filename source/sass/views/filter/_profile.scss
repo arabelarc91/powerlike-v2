@@ -10,7 +10,7 @@
             font-weight: bold;
             font-size: 18px;
             line-height: 18px;
-            padding: 40px 0 45px 0;
+            padding: 40px 0 75px 0;
             background-image: url('../../../images/bg-element-top.png');
             background-repeat: no-repeat;
             background-position: center -20px;
@@ -80,20 +80,34 @@
                 }
             }
         }
+
+        .powerlike_chooseprofile__select {
+            width: 244px;
+            margin: 0 auto;
+    
+            p {
+                @extend .p-blue;
+            }
+    
+            select {
+                width: 100%;
+                background-color: #ffffff;
+                border-radius: 4px;
+                border: 1px solid #DADBDC;
+                height: 55px;
+                line-height: 55px;
+                color: #000000;
+                font-size: 20px;
+                padding: 0 12px;
+            }
+        }
     }
 
     &__slidecontainer__item {
-        width: 250px;
+        width: 260px;
         padding: 0;
         text-align: left;
-        margin: 0 auto 21px auto;
-
-        img,
-        .range,
-        span {
-            vertical-align: middle;
-            display: inline-block;
-        }
+        margin: 0 auto 30px auto;        
 
         .range p {
             @extend .p-blue;
@@ -114,7 +128,7 @@
             height: 6px;
             width: 190px;
             margin: 0 7px 0 0;
-            background: #d9f5fc;
+            background: #DDDDDD;
             outline: none;                
             -webkit-transition: .2s;
             transition: opacity .2s;
@@ -138,51 +152,5 @@
             background:$color-light-blue;
             cursor: pointer;
         }
-    }
-
-    &_profile {
-        &__content {
-            h3 {
-                @extend .h3;
-            }
-    
-            p {
-                @extend .p-blue;
-                margin: 0 auto;
-            }
-        }
-    }
-    
-    &__preselector__content {
-        h2 {
-            @extend .h2;
-            font-weight: normal;
-        }
-    
-        &__buttons {
-            width: 249px;
-            height: 66px;
-            display: block;
-            font-family: $barlow;
-            font-weight: bold;
-            font-size: 12px;
-            background: $white;
-            line-height: 66px;
-            padding: 0 60px;
-            margin: 14px auto;
-            text-align: left;
-            text-transform: uppercase;
-            box-shadow: 0px 4px 4px rgba(125, 164, 201, 0.25);
-            border-radius: 6px;
-    
-            img {
-                width: 30px;
-            }
-            
-            &:active {
-                box-shadow: none;
-                line-height: 68px;
-            }
-        }
-    }
+    }    
 }
