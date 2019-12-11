@@ -1,5 +1,5 @@
 .powerlike_specs {
-    padding: 0; 
+    padding: 0 !important;
 
     .button_entel__carousel {
         position: relative;
@@ -28,20 +28,16 @@
     }
 
     &__characteristics {
-        height: 51px;
+        height: 50px;
         padding: 0 20px;
-        line-height: 55px;
         background-color: $color-blue; 
 
         h5 {
             @extend .h5;
             color: $white;
             font-weight: 400;
-            text-align: center;
             display: inline-block;
             vertical-align: middle;
-            position: relative;
-            top: -4px;
         }        
     }
 

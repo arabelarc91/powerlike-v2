@@ -11,9 +11,6 @@
 // Theme reset
 @import '../../mixin/mixing';
 
-// Preselector
-@import '../preselector/preselector';
-
 // sections
 @import 'header';
 @import 'personas';
@@ -22,6 +19,7 @@
 @import 'splash';
 @import 'profile';
 @import 'profile-market';
+@import 'preselector';
 @import 'footer';
 @import 'devicedetail';
 @import 'specs';

@@ -53,7 +53,7 @@ let profile_selected = {
 
 let preselector = {
     events: function() {
-        $('.powerlike__preselector .powerlike__preselector__content__buttons').click(function() {
+        $('.powerlike__preselector ul li').click(function() {
             flow.setHash('/matches')
             console.log(globalBateryMin)
             console.log(globalBateryMax)
@@ -112,15 +112,6 @@ let sliders = {
             pauseOnHover: false,
             centerMode: true,
             centerPadding: '20px'
-        })
-    }
-}
-
-let selects = {
-    events: function() {
-        $('.select-icon').parent().click(function() {
-            $(this).find('.select-icon').toggleClass("active")
-            $('.powerlike_chooseprofile__select ul').toggleClass("active")
         })
     }
 }
@@ -403,10 +394,6 @@ let load_slider = function() {
     sliders.match_device()
 }
 
-let load_selects = function() {
-    selects.events()
-}
-
 let load_flow = function() {
     flow.detectPopState()
     flow.changeScreen(window.location.hash)
@@ -423,14 +410,13 @@ let load_range = function() {
 // --------- init funcion --------
 // -------------------------------
 
-let initialize = function() {    
+let initialize = function() {
     load_greeting()
     load_profiles()
     load_profile_selected()
     load_preselector()
     load_matches()
     load_slider()
-    load_selects()
     load_flow()
     load_range()
 }
